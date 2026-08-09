@@ -1,27 +1,44 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
-  --color-brand-50: #f2f8fd;
-  --color-brand-100: #e4f0fa;
-  --color-brand-200: #c3e1f4;
-  --color-brand-300: #8fc8ea;
-  --color-brand-400: #53acdd;
-  --color-brand-500: #2c92cb;
-  --color-brand-600: #1d75ac;
-  --color-brand-700: #195d8b;
-  --color-brand-800: #185074;
-  --color-brand-900: #1a4360;
-  --color-brand-950: #112b40;
+  /* =========================
+     MÀU THƯƠNG HIỆU
+  ========================= */
 
-  --color-ink: #111928;
+  --color-brand-600: #c4dff6;
+
+  /* Màu nhấn đậm hơn */
+  --color-accent-500: #4f8fbd;
+
+  /* Màu chữ chính */
+  --color-ink: #111827;
+
+  /* Màu chữ phụ */
   --color-muted: #6b7280;
+
+  /* Nền trang */
   --color-surface: #ffffff;
+
+  /* Màu viền */
   --color-line: #e5e7eb;
 
-  --font-display: "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  /* =========================
+     FONT
+  ========================= */
 
-  --radius-card: 0.875rem;
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* =========================
+     BORDER RADIUS
+  ========================= */
+
+  --radius-card: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-surface);
+  color: var(--color-ink);
 }
