@@ -1,44 +1,53 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* =========================
-     MÀU THƯƠNG HIỆU
+     COLOR TOKENS
   ========================= */
 
+  --color-brand-100: #edf6fc;
+  --color-brand-200: #dcecf9;
   --color-brand-600: #c4dff6;
+  --color-brand-700: #8fc2e8;
 
-  /* Màu nhấn đậm hơn */
   --color-accent-500: #4f8fbd;
 
-  /* Màu chữ chính */
   --color-ink: #111827;
-
-  /* Màu chữ phụ */
   --color-muted: #6b7280;
 
-  /* Nền trang */
   --color-surface: #ffffff;
+  --color-surface-soft: #f8fafc;
 
-  /* Màu viền */
   --color-line: #e5e7eb;
 
   /* =========================
-     FONT
+     FONT TOKENS
   ========================= */
 
-  --font-display: "Inter", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 
   /* =========================
-     BORDER RADIUS
+     RADIUS
   ========================= */
 
-  --radius-card: 8px;
+  --radius-card: 0.5rem;
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: var(--font-body);
-  background: var(--color-surface);
+  background-color: var(--color-surface);
   color: var(--color-ink);
 }
