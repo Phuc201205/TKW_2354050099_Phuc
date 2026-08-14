@@ -3,24 +3,38 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+
   /* =========================
      COLOR TOKENS
   ========================= */
 
+  --color-brand-50: #f5faff;
   --color-brand-100: #edf6fc;
   --color-brand-200: #dcecf9;
+
   --color-brand-600: #c4dff6;
   --color-brand-700: #8fc2e8;
 
   --color-accent-500: #4f8fbd;
 
+
+  /* =========================
+     TEXT
+  ========================= */
+
   --color-ink: #111827;
   --color-muted: #6b7280;
+
+
+  /* =========================
+     SURFACE
+  ========================= */
 
   --color-surface: #ffffff;
   --color-surface-soft: #f8fafc;
 
   --color-line: #e5e7eb;
+
 
   /* =========================
      FONT TOKENS
@@ -28,6 +42,7 @@
 
   --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
+
 
   /* =========================
      RADIUS
@@ -45,9 +60,13 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
+
   font-family: var(--font-body);
+
   background-color: var(--color-surface);
+
   color: var(--color-ink);
 }
