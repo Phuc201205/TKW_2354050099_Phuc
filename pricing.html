@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Bảng giá - HPTime</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="./dist/output.css"
+  />
+</head>
+
+
+<body class="bg-surface font-body text-ink">
+
+  <a
+    href="#main"
+    class="sr-only focus:not-sr-only"
+  >
+    Bỏ qua đến nội dung chính
+  </a>
+
+
+  <!-- NAVBAR -->
+  <header class="w-full border-b border-line bg-surface">
+
+    <nav aria-label="Điều hướng chính">
+
+      <div
+        class="
+          mx-auto
+          flex
+          w-full
+          max-w-6xl
+          items-center
+          gap-4
+          px-5
+          py-4
+          sm:py-5
+          lg:gap-8
+          lg:py-6
+        "
+      >
+
+        <a
+          href="./index.html"
+          class="flex shrink-0 items-center gap-3"
+        >
+
+          <span
+            class="
+              grid
+              h-9
+              w-9
+              place-items-center
+              rounded-lg
+              bg-brand-600
+              font-extrabold
+              text-accent-500
+            "
+          >
+            HP
+          </span>
+
+          <span class="text-xl font-semibold text-ink sm:text-2xl">
+            HPTime
+          </span>
+
+        </a>
+
+
+        <ul class="hidden flex-1 items-center gap-8 lg:flex">
+
+          <li>
+            <a
+              href="./index.html#features"
+              class="font-medium text-ink hover:text-accent-500"
+            >
+              Tính năng
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="./index.html#statistics"
+              class="font-medium text-ink hover:text-accent-500"
+            >
+              Số liệu
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="./pricing.html"
+              aria-current="page"
+              class="font-semibold text-accent-500"
+            >
+              Bảng giá
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="./contact.html"
+              class="font-medium text-ink hover:text-accent-500"
+            >
+              Liên hệ
+            </a>
+          </li>
+
+        </ul>
+
+
+        <div class="ml-auto flex items-center gap-3">
+
+          <a
+            href="./contact.html"
+            class="btn btn-primary hidden sm:inline-flex"
+          >
+            Bắt đầu
+          </a>
+
+
+          <button
+            type="button"
+            aria-label="Mở menu điều hướng"
+            class="
+              grid
+              h-10
+              w-10
+              place-items-center
+              rounded-lg
+              border
+              border-line
+              bg-surface
+              text-ink
+              lg:hidden
+            "
+          >
+            <svg
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <main id="main">
+
+    <!-- PAGE TITLE -->
+    <section
+      class="section bg-surface"
+      aria-labelledby="pricing-page-title"
+    >
+
+      <div
+        class="
+          mx-auto
+          flex
+          max-w-3xl
+          flex-col
+          items-center
+          gap-5
+          px-5
+          text-center
+        "
+      >
+
+        <p class="eyebrow">
+          Bảng giá
+        </p>
+
+        <h1
+          id="pricing-page-title"
+          class="
+            text-4xl
+            font-extrabold
+            tracking-tight
+            text-ink
+            sm:text-5xl
+            lg:text-6xl
+          "
+        >
+          Chọn gói phù hợp với doanh nghiệp
+        </h1>
+
+        <p class="text-base leading-7 text-muted sm:text-lg sm:leading-8">
+          Bắt đầu đơn giản và nâng cấp khi quy mô nhân sự
+          cũng như nhu cầu quản lý của doanh nghiệp tăng lên.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- PRICING -->
+    <section
+      class="section bg-surface-soft"
+      aria-labelledby="plans-title"
+    >
+
+      <div
+        class="
+          mx-auto
+          flex
+          w-full
+          max-w-6xl
+          flex-col
+          gap-10
+          px-5
+        "
+      >
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Các gói HPTime
+          </p>
+
+          <h2
+            id="plans-title"
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
+          >
+            Linh hoạt theo từng giai đoạn phát triển
+          </h2>
+
+        </div>
+
+
+        <ul class="grid items-stretch gap-6 lg:grid-cols-3">
+
+          <!-- STARTER -->
+          <li class="card flex h-full flex-col gap-6 sm:gap-8 sm:p-8">
+
+            <div class="flex flex-col gap-3">
+              <h3 class="text-2xl font-semibold text-ink">Starter</h3>
+              <p class="leading-7 text-muted">
+                Phù hợp với nhóm nhỏ đang bắt đầu số hóa chấm công.
+              </p>
+            </div>
+
+            <div class="flex items-end gap-2">
+              <span class="text-4xl font-extrabold text-ink sm:text-5xl">
+                0đ
+              </span>
+              <span class="text-muted">/ tháng</span>
+            </div>
+
+            <ul class="flex flex-col gap-4">
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Tối đa 10 nhân viên</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Chấm công cơ bản</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Quản lý ca làm</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Báo cáo tháng</li>
+            </ul>
+
+            <a
+              href="./contact.html"
+              class="btn btn-ghost mt-auto"
+            >
+              Bắt đầu miễn phí
+            </a>
+
+          </li>
+
+
+          <!-- BUSINESS -->
+          <li
+            class="
+              card
+              relative
+              flex
+              h-full
+              flex-col
+              gap-6
+              ring-2
+              ring-accent-500
+              sm:gap-8
+              sm:p-8
+            "
+          >
+
+            <span class="badge absolute -top-3 left-4 sm:left-6">
+              Phổ biến
+            </span>
+
+            <div class="flex flex-col gap-3">
+              <h3 class="text-2xl font-semibold text-ink">Business</h3>
+              <p class="leading-7 text-muted">
+                Phù hợp với doanh nghiệp đang phát triển.
+              </p>
+            </div>
+
+            <div class="flex items-end gap-2">
+              <span class="text-4xl font-extrabold text-ink sm:text-5xl">
+                499k
+              </span>
+              <span class="text-muted">/ tháng</span>
+            </div>
+
+            <ul class="flex flex-col gap-4">
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Tối đa 100 nhân viên</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Quản lý nhiều ca</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Dashboard và báo cáo</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Phân quyền quản lý</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Hỗ trợ ưu tiên</li>
+            </ul>
+
+            <a
+              href="./contact.html"
+              class="btn btn-primary mt-auto"
+            >
+              Chọn Business
+            </a>
+
+          </li>
+
+
+          <!-- ENTERPRISE -->
+          <li class="card flex h-full flex-col gap-6 sm:gap-8 sm:p-8">
+
+            <div class="flex flex-col gap-3">
+              <h3 class="text-2xl font-semibold text-ink">Enterprise</h3>
+              <p class="leading-7 text-muted">
+                Dành cho doanh nghiệp lớn cần giải pháp riêng.
+              </p>
+            </div>
+
+            <p class="text-3xl font-extrabold text-ink sm:text-4xl">
+              Liên hệ
+            </p>
+
+            <ul class="flex flex-col gap-4">
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Không giới hạn nhân viên</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Phân quyền nâng cao</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Báo cáo tùy chỉnh</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Hỗ trợ triển khai</li>
+            </ul>
+
+            <a
+              href="./contact.html"
+              class="btn btn-ghost mt-auto"
+            >
+              Liên hệ tư vấn
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- COMPARISON -->
+    <section
+      class="section bg-surface"
+      aria-labelledby="comparison-title"
+    >
+
+      <div
+        class="
+          mx-auto
+          flex
+          w-full
+          max-w-6xl
+          flex-col
+          gap-8
+          px-5
+        "
+      >
+
+        <div class="flex max-w-2xl flex-col gap-4">
+
+          <p class="eyebrow">
+            So sánh
+          </p>
+
+          <h2
+            id="comparison-title"
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
+          >
+            So sánh chi tiết các gói
+          </h2>
+
+          <p class="leading-7 text-muted">
+            Xem nhanh những tính năng được cung cấp
+            trong từng gói HPTime.
+          </p>
+
+        </div>
+
+
+        <p class="text-sm text-muted lg:hidden">
+          Vuốt ngang để xem hết bảng.
+        </p>
+
+
+        <div class="overflow-x-auto rounded-card border border-line">
+
+          <table
+            class="
+              w-full
+              min-w-[720px]
+              border-collapse
+              text-left
+            "
+          >
+
+            <caption class="sr-only">
+              So sánh các gói HPTime
+            </caption>
+
+
+            <thead class="bg-surface-soft">
+
+              <tr>
+
+                <th
+                  scope="col"
+                  class="border-b border-line px-5 py-4 font-semibold text-ink"
+                >
+                  Tính năng
+                </th>
+
+                <th
+                  scope="col"
+                  class="border-b border-line px-5 py-4 text-center font-semibold text-ink"
+                >
+                  Starter
+                </th>
+
+                <th
+                  scope="col"
+                  class="border-b border-line px-5 py-4 text-center font-semibold text-ink"
+                >
+                  Business
+                </th>
+
+                <th
+                  scope="col"
+                  class="border-b border-line px-5 py-4 text-center font-semibold text-ink"
+                >
+                  Enterprise
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+                <th scope="row" class="border-b border-line px-5 py-4 font-medium text-ink">
+                  Số nhân viên
+                </th>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">10</td>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">100</td>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">Không giới hạn</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row" class="border-b border-line px-5 py-4 font-medium text-ink">
+                  Quản lý ca
+                </th>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row" class="border-b border-line px-5 py-4 font-medium text-ink">
+                  Dashboard
+                </th>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">Cơ bản</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row" class="border-b border-line px-5 py-4 font-medium text-ink">
+                  Phân quyền nâng cao
+                </th>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">—</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row" class="border-b border-line px-5 py-4 font-medium text-ink">
+                  Báo cáo tùy chỉnh
+                </th>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">—</td>
+                <td class="border-b border-line px-5 py-4 text-center text-muted">—</td>
+                <td class="border-b border-line px-5 py-4 text-center">✓</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row" class="px-5 py-4 font-medium text-ink">
+                  Hỗ trợ
+                </th>
+                <td class="px-5 py-4 text-center text-muted">Cơ bản</td>
+                <td class="px-5 py-4 text-center text-muted">Ưu tiên</td>
+                <td class="px-5 py-4 text-center text-muted">Triển khai riêng</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- PAYMENT FAQ -->
+    <section
+      class="section bg-surface-soft"
+      aria-labelledby="payment-title"
+    >
+
+      <div
+        class="
+          mx-auto
+          grid
+          w-full
+          max-w-6xl
+          gap-10
+          px-5
+          lg:grid-cols-[1fr_1.4fr]
+          lg:gap-12
+        "
+      >
+
+        <div class="flex flex-col gap-4">
+
+          <p class="eyebrow">
+            Thanh toán
+          </p>
+
+          <h2
+            id="payment-title"
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
+          >
+            Câu hỏi về gói và thanh toán
+          </h2>
+
+        </div>
+
+
+        <div class="divide-y divide-line border-y border-line">
+
+          <details class="py-5 sm:py-6">
+            <summary class="cursor-pointer font-semibold text-ink">
+              Tôi có thể đổi gói sau khi đăng ký không?
+            </summary>
+            <p class="pt-4 leading-7 text-muted">
+              Có. Doanh nghiệp có thể nâng cấp gói
+              khi nhu cầu và số lượng nhân viên thay đổi.
+            </p>
+          </details>
+
+
+          <details class="py-5 sm:py-6">
+            <summary class="cursor-pointer font-semibold text-ink">
+              Gói Starter có mất phí không?
+            </summary>
+            <p class="pt-4 leading-7 text-muted">
+              Không. Starter giúp đội nhóm nhỏ bắt đầu
+              sử dụng các chức năng chấm công cơ bản.
+            </p>
+          </details>
+
+
+          <details class="py-5 sm:py-6">
+            <summary class="cursor-pointer font-semibold text-ink">
+              Enterprise tính phí như thế nào?
+            </summary>
+            <p class="pt-4 leading-7 text-muted">
+              Chi phí phụ thuộc vào quy mô và
+              yêu cầu triển khai của doanh nghiệp.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+    <section class="section bg-brand-100">
+
+      <div
+        class="
+          mx-auto
+          flex
+          max-w-2xl
+          flex-col
+          items-center
+          gap-6
+          px-5
+          text-center
+        "
+      >
+
+        <h2 class="text-3xl font-extrabold text-ink sm:text-4xl">
+          Chưa biết nên chọn gói nào?
+        </h2>
+
+        <p class="leading-7 text-muted sm:text-lg">
+          Gửi nhu cầu của doanh nghiệp để HPTime
+          hỗ trợ bạn lựa chọn gói phù hợp.
+        </p>
+
+        <a
+          href="./contact.html"
+          class="btn btn-primary"
+        >
+          Liên hệ tư vấn
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="bg-surface py-16 sm:py-20">
+
+    <div
+      class="
+        mx-auto
+        grid
+        w-full
+        max-w-6xl
+        grid-cols-1
+        gap-10
+        px-5
+        sm:grid-cols-2
+        lg:grid-cols-4
+      "
+    >
+
+      <div class="flex flex-col gap-4">
+
+        <a
+          href="./index.html"
+          class="flex items-center gap-3"
+        >
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 font-bold text-accent-500">
+            HP
+          </span>
+          <span class="text-2xl font-semibold text-ink">
+            HPTime
+          </span>
+        </a>
+
+        <p class="leading-7 text-muted">
+          Chấm công thông minh cho doanh nghiệp.
+        </p>
+
+      </div>
+
+
+      <nav aria-labelledby="pricing-product">
+
+        <div class="flex flex-col gap-4">
+
+          <h2
+            id="pricing-product"
+            class="font-semibold text-ink"
+          >
+            Sản phẩm
+          </h2>
+
+          <ul class="flex flex-col gap-3 text-muted">
+            <li><a href="./index.html#features" class="hover:text-accent-500">Tính năng</a></li>
+            <li><a href="./pricing.html" class="hover:text-accent-500">Bảng giá</a></li>
+          </ul>
+
+        </div>
+
+      </nav>
+
+
+      <nav aria-labelledby="pricing-support">
+
+        <div class="flex flex-col gap-4">
+
+          <h2
+            id="pricing-support"
+            class="font-semibold text-ink"
+          >
+            Hỗ trợ
+          </h2>
+
+          <ul class="flex flex-col gap-3 text-muted">
+            <li><a href="./contact.html" class="hover:text-accent-500">Liên hệ</a></li>
+            <li><a href="./index.html#faq" class="hover:text-accent-500">FAQ</a></li>
+          </ul>
+
+        </div>
+
+      </nav>
+
+
+      <address class="flex flex-col gap-3 not-italic text-muted">
+
+        <p class="font-semibold text-ink">
+          Liên hệ
+        </p>
+
+        <p>TP. Hồ Chí Minh, Việt Nam</p>
+
+        <a
+          href="mailto:support@hptime.vn"
+          class="break-all hover:text-accent-500"
+        >
+          support@hptime.vn
+        </a>
+
+        <a
+          href="tel:+842812345678"
+          class="hover:text-accent-500"
+        >
+          (028) 1234 5678
+        </a>
+
+      </address>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

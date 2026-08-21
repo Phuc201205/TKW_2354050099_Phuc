@@ -2,52 +2,209 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-  /* =========================
-     COLOR TOKENS
-  ========================= */
 
+/* ==================================================
+   DESIGN TOKENS
+=================================================== */
+
+@theme {
+
+  /* ==================================================
+     BRAND - LIGHT MODE
+  =================================================== */
+
+  --color-brand-50: #f5faff;
   --color-brand-100: #edf6fc;
   --color-brand-200: #dcecf9;
+
   --color-brand-600: #c4dff6;
   --color-brand-700: #8fc2e8;
 
   --color-accent-500: #4f8fbd;
 
+
+  /* ==================================================
+     TEXT - LIGHT MODE
+  =================================================== */
+
   --color-ink: #111827;
   --color-muted: #6b7280;
+
+
+  /* ==================================================
+     SURFACE - LIGHT MODE
+  =================================================== */
 
   --color-surface: #ffffff;
   --color-surface-soft: #f8fafc;
 
   --color-line: #e5e7eb;
 
-  /* =========================
-     FONT TOKENS
-  ========================= */
+
+  /* ==================================================
+     DARK MODE PAIRS
+  =================================================== */
+
+  --color-ink-invert: #e8f1f7;
+  --color-muted-invert: #a9bac5;
+
+  --color-line-invert: #294252;
+
+  --color-surface-dark: #0e1b24;
+  --color-surface-dark-alt: #142630;
+
+  --color-brand-50-dark: #11232e;
+  --color-brand-100-dark: #172d3a;
+  --color-brand-200-dark: #1d3949;
+
+  --color-brand-600-dark: #315b73;
+  --color-brand-700-dark: #407594;
+
+  --color-accent-500-dark: #80b9dc;
+
+  --color-on-accent: #f5faff;
+
+
+  /* ==================================================
+     FONT
+  =================================================== */
 
   --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* =========================
+
+  /* ==================================================
      RADIUS
-  ========================= */
+  =================================================== */
 
   --radius-card: 0.5rem;
 }
 
 
-/* =========================
+/* ==================================================
+   DARK MODE
+   Chỉ đổi giá trị token.
+   HTML không cần rải dark:* khắp nơi.
+=================================================== */
+
+.dark {
+
+  --color-ink: var(--color-ink-invert);
+  --color-muted: var(--color-muted-invert);
+
+  --color-line: var(--color-line-invert);
+
+  --color-surface: var(--color-surface-dark);
+  --color-surface-soft: var(--color-surface-dark-alt);
+
+  --color-brand-50: var(--color-brand-50-dark);
+  --color-brand-100: var(--color-brand-100-dark);
+  --color-brand-200: var(--color-brand-200-dark);
+
+  --color-brand-600: var(--color-brand-600-dark);
+  --color-brand-700: var(--color-brand-700-dark);
+
+  --color-accent-500: var(--color-accent-500-dark);
+}
+
+
+/* ==================================================
+   COMPONENTS
+
+   Chỉ trích các mẫu xuất hiện lặp lại nhiều lần.
+=================================================== */
+
+@layer components {
+
+  /* 1. SECTION */
+
+  .section {
+    @apply py-16 sm:py-24;
+  }
+
+
+  /* 2. SECTION HEADING */
+
+  .section-heading {
+    @apply mx-auto flex max-w-3xl flex-col gap-4 text-center;
+  }
+
+
+  /* 3. EYEBROW */
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wide text-accent-500;
+  }
+
+
+  /* 4. BUTTON BASE */
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium transition-colors;
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500;
+  }
+
+
+  /* 5. PRIMARY BUTTON */
+
+  .btn-primary {
+    @apply bg-accent-500 text-on-accent hover:bg-brand-700;
+  }
+
+
+  /* 6. GHOST BUTTON */
+
+  .btn-ghost {
+    @apply border border-line bg-surface text-ink hover:bg-surface-soft;
+  }
+
+
+  /* 7. CARD */
+
+  .card {
+    @apply rounded-card border border-line bg-surface p-6;
+  }
+
+
+  /* 8. BADGE */
+
+  .badge {
+    @apply rounded-full bg-accent-500 px-3 py-1 text-xs font-semibold text-on-accent;
+  }
+
+
+  /* 9. FIELD LABEL */
+
+  .field-label {
+    @apply text-sm font-medium text-ink;
+  }
+
+
+  /* 10. FIELD INPUT */
+
+  .field-input {
+    @apply w-full rounded-lg border border-line bg-surface px-4 py-3 text-ink;
+    @apply focus:outline-2 focus:outline-offset-2 focus:outline-accent-500;
+  }
+
+}
+
+
+/* ==================================================
    BASE
-========================= */
+=================================================== */
 
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
+
   font-family: var(--font-body);
+
   background-color: var(--color-surface);
+
   color: var(--color-ink);
 }
