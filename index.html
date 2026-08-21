@@ -14,9 +14,7 @@
   <title>HPTime - SaaS chấm công thông minh</title>
 
 
-  <!-- =========================
-       FONT
-  ========================== -->
+  <!-- FONT -->
 
   <link
     rel="preconnect"
@@ -35,9 +33,7 @@
   />
 
 
-  <!-- =========================
-       TAILWIND OUTPUT
-  ========================== -->
+  <!-- TAILWIND OUTPUT -->
 
   <link
     rel="stylesheet"
@@ -76,7 +72,14 @@
        1. NAVBAR
   =================================================== -->
 
-  <header class="w-full bg-surface">
+  <header
+    class="
+      w-full
+      border-b
+      border-line
+      bg-surface
+    "
+  >
 
     <nav aria-label="Điều hướng chính">
 
@@ -95,6 +98,7 @@
           lg:py-6
         "
       >
+
 
         <!-- LOGO -->
 
@@ -123,6 +127,7 @@
           >
             HP
           </span>
+
 
           <span
             class="
@@ -167,6 +172,7 @@
             </a>
           </li>
 
+
           <li>
             <a
               href="#statistics"
@@ -181,6 +187,7 @@
               Số liệu
             </a>
           </li>
+
 
           <li>
             <a
@@ -197,6 +204,7 @@
             </a>
           </li>
 
+
           <li>
             <a
               href="#pricing"
@@ -211,6 +219,7 @@
               Bảng giá
             </a>
           </li>
+
 
           <li>
             <a
@@ -231,7 +240,7 @@
 
 
 
-        <!-- RIGHT NAV -->
+        <!-- RIGHT -->
 
         <div
           class="
@@ -244,8 +253,6 @@
             lg:gap-4
           "
         >
-
-          <!-- LOGIN -->
 
           <a
             href="#"
@@ -262,24 +269,12 @@
           </a>
 
 
-          <!-- CTA -->
-
           <a
             href="#cta"
             class="
+              btn
+              btn-primary
               hidden
-              items-center
-              justify-center
-              whitespace-nowrap
-              rounded-lg
-              bg-accent-500
-              px-4
-              py-2
-              text-sm
-              font-medium
-              text-white
-              transition-colors
-              hover:bg-brand-700
               sm:inline-flex
             "
           >
@@ -287,7 +282,7 @@
           </a>
 
 
-          <!-- HAMBURGER PLACEHOLDER -->
+          <!-- Hamburger placeholder -->
 
           <button
             type="button"
@@ -388,6 +383,11 @@
             "
           >
 
+            <p class="eyebrow">
+              SaaS chấm công cho doanh nghiệp
+            </p>
+
+
             <h1
               id="hero-title"
               class="
@@ -428,7 +428,7 @@
 
 
 
-          <!-- HERO BUTTONS -->
+          <!-- BUTTONS -->
 
           <div
             class="
@@ -444,18 +444,8 @@
             <a
               href="#cta"
               class="
-                inline-flex
-                items-center
-                justify-center
-                rounded-lg
-                bg-accent-500
-                px-5
-                py-3
-                text-base
-                font-medium
-                text-white
-                transition-colors
-                hover:bg-brand-700
+                btn
+                btn-primary
               "
             >
               Dùng thử miễn phí
@@ -465,20 +455,8 @@
             <a
               href="#pricing"
               class="
-                inline-flex
-                items-center
-                justify-center
-                rounded-lg
-                border
-                border-line
-                bg-surface
-                px-5
-                py-3
-                text-base
-                font-medium
-                text-ink
-                transition-colors
-                hover:bg-surface-soft
+                btn
+                btn-ghost
               "
             >
               Bảng giá & FAQ
@@ -525,7 +503,6 @@
                 border-line
                 bg-surface
                 p-4
-                shadow-lg
                 sm:gap-6
                 sm:p-6
               "
@@ -597,10 +574,10 @@
 
                 <div
                   class="
+                    card
                     flex
                     flex-col
                     gap-2
-                    rounded-card
                     bg-surface-soft
                     p-4
                     sm:p-5
@@ -627,10 +604,10 @@
 
                 <div
                   class="
+                    card
                     flex
                     flex-col
                     gap-2
-                    rounded-card
                     bg-surface-soft
                     p-4
                     sm:p-5
@@ -761,7 +738,6 @@
         >
 
           <li class="flex items-center gap-3 text-muted">
-
             <span
               class="
                 grid
@@ -781,12 +757,10 @@
             <span class="text-base font-semibold sm:text-lg">
               NovaOffice
             </span>
-
           </li>
 
 
           <li class="flex items-center gap-3 text-muted">
-
             <span
               class="
                 grid
@@ -806,12 +780,10 @@
             <span class="text-base font-semibold sm:text-lg">
               AnPhat
             </span>
-
           </li>
 
 
           <li class="flex items-center gap-3 text-muted">
-
             <span
               class="
                 grid
@@ -831,12 +803,10 @@
             <span class="text-base font-semibold sm:text-lg">
               GreenMart
             </span>
-
           </li>
 
 
           <li class="flex items-center gap-3 text-muted">
-
             <span
               class="
                 grid
@@ -856,12 +826,10 @@
             <span class="text-base font-semibold sm:text-lg">
               MinhLong
             </span>
-
           </li>
 
 
           <li class="flex items-center gap-3 text-muted">
-
             <span
               class="
                 grid
@@ -881,12 +849,10 @@
             <span class="text-base font-semibold sm:text-lg">
               SunFood
             </span>
-
           </li>
 
 
           <li class="flex items-center gap-3 text-muted">
-
             <span
               class="
                 grid
@@ -906,7 +872,6 @@
             <span class="text-base font-semibold sm:text-lg">
               EduPlus
             </span>
-
           </li>
 
         </ul>
@@ -925,9 +890,8 @@
       id="features"
       aria-labelledby="features-title"
       class="
+        section
         bg-surface-soft
-        py-16
-        sm:py-24
       "
     >
 
@@ -944,16 +908,11 @@
         "
       >
 
-        <div
-          class="
-            mx-auto
-            flex
-            max-w-3xl
-            flex-col
-            gap-4
-            text-center
-          "
-        >
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Tính năng
+          </p>
 
           <h2
             id="features-title"
@@ -999,18 +958,7 @@
 
           <!-- FEATURE 1 -->
 
-          <li
-            class="
-              flex
-              flex-col
-              gap-4
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-            "
-          >
+          <li class="card flex flex-col gap-4">
 
             <span
               class="
@@ -1023,6 +971,7 @@
                 text-accent-500
               "
             >
+
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -1034,6 +983,7 @@
                 <circle cx="12" cy="12" r="9"></circle>
                 <path d="M12 7v5l3 2"></path>
               </svg>
+
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -1048,20 +998,10 @@
           </li>
 
 
+
           <!-- FEATURE 2 -->
 
-          <li
-            class="
-              flex
-              flex-col
-              gap-4
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-            "
-          >
+          <li class="card flex flex-col gap-4">
 
             <span
               class="
@@ -1074,6 +1014,7 @@
                 text-accent-500
               "
             >
+
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -1087,6 +1028,7 @@
                 <path d="M16 3v4"></path>
                 <path d="M4 10h16"></path>
               </svg>
+
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -1101,20 +1043,10 @@
           </li>
 
 
+
           <!-- FEATURE 3 -->
 
-          <li
-            class="
-              flex
-              flex-col
-              gap-4
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-            "
-          >
+          <li class="card flex flex-col gap-4">
 
             <span
               class="
@@ -1127,6 +1059,7 @@
                 text-accent-500
               "
             >
+
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -1140,6 +1073,7 @@
                 <path d="M16 19v-7"></path>
                 <path d="M22 19H2"></path>
               </svg>
+
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -1154,20 +1088,10 @@
           </li>
 
 
+
           <!-- FEATURE 4 -->
 
-          <li
-            class="
-              flex
-              flex-col
-              gap-4
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-            "
-          >
+          <li class="card flex flex-col gap-4">
 
             <span
               class="
@@ -1180,6 +1104,7 @@
                 text-accent-500
               "
             >
+
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -1193,6 +1118,7 @@
                 <path d="M3 20c0-4 2-7 6-7s6 3 6 7"></path>
                 <path d="M15 14c3 0 5 2 5 5"></path>
               </svg>
+
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -1207,20 +1133,10 @@
           </li>
 
 
+
           <!-- FEATURE 5 -->
 
-          <li
-            class="
-              flex
-              flex-col
-              gap-4
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-            "
-          >
+          <li class="card flex flex-col gap-4">
 
             <span
               class="
@@ -1233,6 +1149,7 @@
                 text-accent-500
               "
             >
+
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -1244,6 +1161,7 @@
                 <path d="M12 22s7-4 7-11V5l-7-3-7 3v6c0 7 7 11 7 11Z"></path>
                 <path d="m9 12 2 2 4-4"></path>
               </svg>
+
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -1258,20 +1176,10 @@
           </li>
 
 
+
           <!-- FEATURE 6 -->
 
-          <li
-            class="
-              flex
-              flex-col
-              gap-4
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-            "
-          >
+          <li class="card flex flex-col gap-4">
 
             <span
               class="
@@ -1284,6 +1192,7 @@
                 text-accent-500
               "
             >
+
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -1297,6 +1206,7 @@
                 <path d="M9 11h6"></path>
                 <path d="M9 15h3"></path>
               </svg>
+
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -1345,16 +1255,11 @@
         "
       >
 
-        <div
-          class="
-            mx-auto
-            flex
-            max-w-2xl
-            flex-col
-            gap-4
-            text-center
-          "
-        >
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Số liệu
+          </p>
 
           <h2
             id="statistics-title"
@@ -1368,6 +1273,7 @@
           >
             Một hệ thống, nhiều công việc được đơn giản hóa
           </h2>
+
 
           <p
             class="
@@ -1385,6 +1291,7 @@
         </div>
 
 
+
         <dl
           class="
             grid
@@ -1399,39 +1306,86 @@
         >
 
           <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
+
             <dt class="order-2 text-sm text-muted">
               Quy trình chấm công
             </dt>
-            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">
+
+            <dd
+              class="
+                order-1
+                text-3xl
+                font-extrabold
+                text-accent-500
+                sm:text-4xl
+              "
+            >
               3 bước
             </dd>
+
           </div>
 
+
           <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
+
             <dt class="order-2 text-sm text-muted">
               Quản lý tập trung
             </dt>
-            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">
+
+            <dd
+              class="
+                order-1
+                text-3xl
+                font-extrabold
+                text-accent-500
+                sm:text-4xl
+              "
+            >
               1 nơi
             </dd>
+
           </div>
 
+
           <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
+
             <dt class="order-2 text-sm text-muted">
               Khả năng truy cập
             </dt>
-            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">
+
+            <dd
+              class="
+                order-1
+                text-3xl
+                font-extrabold
+                text-accent-500
+                sm:text-4xl
+              "
+            >
               24/7
             </dd>
+
           </div>
 
+
           <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
+
             <dt class="order-2 text-sm text-muted">
               Tổng hợp bảng công
             </dt>
-            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">
+
+            <dd
+              class="
+                order-1
+                text-3xl
+                font-extrabold
+                text-accent-500
+                sm:text-4xl
+              "
+            >
               Tự động
             </dd>
+
           </div>
 
         </dl>
@@ -1450,9 +1404,8 @@
       id="testimonials"
       aria-labelledby="testimonials-title"
       class="
+        section
         bg-surface
-        py-16
-        sm:py-24
       "
     >
 
@@ -1490,7 +1443,7 @@
             class="
               text-5xl
               font-bold
-              text-brand-600
+              text-accent-500
             "
             aria-hidden="true"
           >
@@ -1554,9 +1507,8 @@
       id="pricing"
       aria-labelledby="pricing-title"
       class="
+        section
         bg-surface-soft
-        py-16
-        sm:py-24
       "
     >
 
@@ -1573,16 +1525,11 @@
         "
       >
 
-        <div
-          class="
-            mx-auto
-            flex
-            max-w-2xl
-            flex-col
-            gap-4
-            text-center
-          "
-        >
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Bảng giá
+          </p>
 
           <h2
             id="pricing-title"
@@ -1596,6 +1543,7 @@
           >
             Gói phù hợp với quy mô doanh nghiệp
           </h2>
+
 
           <p
             class="
@@ -1613,6 +1561,7 @@
         </div>
 
 
+
         <ul
           class="
             grid
@@ -1626,16 +1575,11 @@
 
           <li
             class="
+              card
               flex
               h-full
               flex-col
               gap-6
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-              shadow-md
               sm:gap-8
               sm:p-8
             "
@@ -1656,7 +1600,14 @@
 
             <div class="flex flex-wrap items-end gap-2">
 
-              <span class="text-4xl font-extrabold text-ink sm:text-5xl">
+              <span
+                class="
+                  text-4xl
+                  font-extrabold
+                  text-ink
+                  sm:text-5xl
+                "
+              >
                 0đ
               </span>
 
@@ -1670,58 +1621,22 @@
             <ul class="flex flex-col gap-4">
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Tối đa 10 nhân viên</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Chấm công cơ bản</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Quản lý ca làm</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Báo cáo theo tháng</span>
               </li>
 
@@ -1731,19 +1646,9 @@
             <a
               href="#cta"
               class="
+                btn
+                btn-ghost
                 mt-auto
-                inline-flex
-                items-center
-                justify-center
-                rounded-lg
-                border
-                border-accent-500
-                px-5
-                py-3
-                font-medium
-                text-accent-500
-                transition-colors
-                hover:bg-brand-50
               "
             >
               Bắt đầu miễn phí
@@ -1757,17 +1662,12 @@
 
           <li
             class="
+              card
               relative
               flex
               h-full
               flex-col
               gap-6
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-              shadow-md
               ring-2
               ring-accent-500
               sm:gap-8
@@ -1777,16 +1677,10 @@
 
             <span
               class="
+                badge
                 absolute
                 -top-3
                 left-4
-                rounded-full
-                bg-accent-500
-                px-3
-                py-1
-                text-xs
-                font-semibold
-                text-white
                 sm:left-6
               "
             >
@@ -1809,7 +1703,14 @@
 
             <div class="flex flex-wrap items-end gap-2">
 
-              <span class="text-4xl font-extrabold text-ink sm:text-5xl">
+              <span
+                class="
+                  text-4xl
+                  font-extrabold
+                  text-ink
+                  sm:text-5xl
+                "
+              >
                 499k
               </span>
 
@@ -1823,72 +1724,27 @@
             <ul class="flex flex-col gap-4">
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Tối đa 100 nhân viên</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Quản lý nhiều ca làm</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Dashboard và báo cáo</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Phân quyền quản lý</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Hỗ trợ ưu tiên</span>
               </li>
 
@@ -1898,18 +1754,9 @@
             <a
               href="#cta"
               class="
+                btn
+                btn-primary
                 mt-auto
-                inline-flex
-                items-center
-                justify-center
-                rounded-lg
-                bg-accent-500
-                px-5
-                py-3
-                font-medium
-                text-white
-                transition-colors
-                hover:bg-brand-700
               "
             >
               Chọn Business
@@ -1923,16 +1770,11 @@
 
           <li
             class="
+              card
               flex
               h-full
               flex-col
               gap-6
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
-              shadow-md
               sm:gap-8
               sm:p-8
             "
@@ -1953,7 +1795,14 @@
 
             <div class="flex items-end gap-2">
 
-              <span class="text-3xl font-extrabold text-ink sm:text-4xl">
+              <span
+                class="
+                  text-3xl
+                  font-extrabold
+                  text-ink
+                  sm:text-4xl
+                "
+              >
                 Liên hệ
               </span>
 
@@ -1963,58 +1812,22 @@
             <ul class="flex flex-col gap-4">
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Không giới hạn nhân viên</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Phân quyền nâng cao</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Báo cáo tùy chỉnh</span>
               </li>
 
               <li class="flex items-start gap-3">
-                <svg
-                  class="h-5 w-5 shrink-0 text-accent-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m5 12 4 4L19 6"></path>
-                </svg>
+                <span class="text-accent-500" aria-hidden="true">✓</span>
                 <span>Hỗ trợ triển khai</span>
               </li>
 
@@ -2024,19 +1837,9 @@
             <a
               href="#contact"
               class="
+                btn
+                btn-ghost
                 mt-auto
-                inline-flex
-                items-center
-                justify-center
-                rounded-lg
-                border
-                border-accent-500
-                px-5
-                py-3
-                font-medium
-                text-accent-500
-                transition-colors
-                hover:bg-brand-50
               "
             >
               Liên hệ tư vấn
@@ -2060,9 +1863,8 @@
       id="faq"
       aria-labelledby="faq-title"
       class="
+        section
         bg-surface
-        py-16
-        sm:py-24
       "
     >
 
@@ -2080,6 +1882,10 @@
       >
 
         <div class="flex flex-col gap-4">
+
+          <p class="eyebrow">
+            FAQ
+          </p>
 
           <h2
             id="faq-title"
@@ -2121,7 +1927,14 @@
         >
 
           <details class="py-5 sm:py-6">
-            <summary class="cursor-pointer font-semibold text-ink">
+
+            <summary
+              class="
+                cursor-pointer
+                font-semibold
+                text-ink
+              "
+            >
               HPTime có phù hợp với doanh nghiệp nhỏ không?
             </summary>
 
@@ -2129,11 +1942,19 @@
               Có. Doanh nghiệp có thể bắt đầu với gói cơ bản
               và nâng cấp khi số lượng nhân viên tăng.
             </p>
+
           </details>
 
 
           <details class="py-5 sm:py-6">
-            <summary class="cursor-pointer font-semibold text-ink">
+
+            <summary
+              class="
+                cursor-pointer
+                font-semibold
+                text-ink
+              "
+            >
               Có thể quản lý nhiều ca làm việc không?
             </summary>
 
@@ -2141,11 +1962,19 @@
               HPTime cho phép tạo nhiều ca làm việc
               và phân công cho từng nhân viên hoặc phòng ban.
             </p>
+
           </details>
 
 
           <details class="py-5 sm:py-6">
-            <summary class="cursor-pointer font-semibold text-ink">
+
+            <summary
+              class="
+                cursor-pointer
+                font-semibold
+                text-ink
+              "
+            >
               Dữ liệu chấm công được tổng hợp như thế nào?
             </summary>
 
@@ -2153,11 +1982,19 @@
               Dữ liệu được lưu theo từng ngày và có thể
               tổng hợp thành báo cáo phục vụ quản lý.
             </p>
+
           </details>
 
 
           <details class="py-5 sm:py-6">
-            <summary class="cursor-pointer font-semibold text-ink">
+
+            <summary
+              class="
+                cursor-pointer
+                font-semibold
+                text-ink
+              "
+            >
               Tôi có thể thay đổi gói sử dụng không?
             </summary>
 
@@ -2165,6 +2002,7 @@
               Có. Doanh nghiệp có thể nâng cấp gói khi
               quy mô nhân sự hoặc nhu cầu quản lý thay đổi.
             </p>
+
           </details>
 
         </div>
@@ -2183,9 +2021,8 @@
       id="how-it-works"
       aria-labelledby="how-it-works-title"
       class="
+        section
         bg-surface-soft
-        py-16
-        sm:py-24
       "
     >
 
@@ -2202,16 +2039,11 @@
         "
       >
 
-        <div
-          class="
-            mx-auto
-            flex
-            max-w-2xl
-            flex-col
-            gap-4
-            text-center
-          "
-        >
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Cách hoạt động
+          </p>
 
           <h2
             id="how-it-works-title"
@@ -2252,14 +2084,10 @@
 
           <li
             class="
+              card
               flex
               flex-col
               gap-5
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
               sm:p-8
             "
           >
@@ -2268,7 +2096,7 @@
               class="
                 text-3xl
                 font-extrabold
-                text-brand-600
+                text-accent-500
                 sm:text-4xl
               "
               aria-hidden="true"
@@ -2290,14 +2118,10 @@
 
           <li
             class="
+              card
               flex
               flex-col
               gap-5
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
               sm:p-8
             "
           >
@@ -2306,7 +2130,7 @@
               class="
                 text-3xl
                 font-extrabold
-                text-brand-600
+                text-accent-500
                 sm:text-4xl
               "
               aria-hidden="true"
@@ -2328,14 +2152,10 @@
 
           <li
             class="
+              card
               flex
               flex-col
               gap-5
-              rounded-card
-              border
-              border-line
-              bg-surface
-              p-6
               sm:p-8
             "
           >
@@ -2344,7 +2164,7 @@
               class="
                 text-3xl
                 font-extrabold
-                text-brand-600
+                text-accent-500
                 sm:text-4xl
               "
               aria-hidden="true"
@@ -2379,9 +2199,8 @@
       id="cta"
       aria-labelledby="cta-title"
       class="
+        section
         bg-brand-100
-        py-16
-        sm:py-24
       "
     >
 
@@ -2412,6 +2231,7 @@
           Bắt đầu quản lý chấm công dễ dàng hơn
         </h2>
 
+
         <p
           class="
             text-base
@@ -2425,21 +2245,13 @@
           quản lý giờ làm rõ ràng cho doanh nghiệp của bạn.
         </p>
 
+
         <a
           href="#pricing"
           class="
-            inline-flex
+            btn
+            btn-primary
             w-full
-            items-center
-            justify-center
-            rounded-lg
-            bg-accent-500
-            px-6
-            py-3
-            font-medium
-            text-white
-            transition-colors
-            hover:bg-brand-700
             sm:w-auto
           "
         >
@@ -2554,6 +2366,7 @@
               Sản phẩm
             </h2>
 
+
             <ul class="flex flex-col gap-3 text-muted">
 
               <li>
@@ -2599,6 +2412,7 @@
             >
               Hỗ trợ
             </h2>
+
 
             <ul class="flex flex-col gap-3 text-muted">
 
@@ -2660,7 +2474,10 @@
 
             <a
               href="mailto:support@hptime.vn"
-              class="break-all hover:text-accent-500"
+              class="
+                break-all
+                hover:text-accent-500
+              "
             >
               support@hptime.vn
             </a>
