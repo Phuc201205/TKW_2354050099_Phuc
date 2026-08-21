@@ -1,15 +1,22 @@
 # TKW_2354050099_Phuc
 
-## Bài thực hành Thiết kế Web - Buổi 1
+## Bài thực hành Thiết kế Web
 
-### Sản phẩm SaaS
+### Sản phẩm
 
-HPTime - nền tảng SaaS hỗ trợ doanh nghiệp quản lý chấm công, thời gian làm việc và ca làm của nhân viên.
+**HPTime - SaaS chấm công thông minh**
 
-### Design Token
+HPTime là nền tảng SaaS hỗ trợ doanh nghiệp quản lý chấm công, thời gian làm việc, ca làm và thông tin nhân viên trên một hệ thống thống nhất.
+
+---
+
+# Buổi 1 - Design Token và giao diện cơ bản
+
+## Design Token
 
 | Vai trò | Giá trị | Token | Tailwind |
 |---|---|---|---|
+| Màu thương hiệu rất nhạt | #f5faff | --color-brand-50 | bg-brand-50 |
 | Màu thương hiệu nhạt | #edf6fc | --color-brand-100 | bg-brand-100 |
 | Màu thương hiệu phụ | #dcecf9 | --color-brand-200 | bg-brand-200 |
 | Màu thương hiệu chính | #c4dff6 | --color-brand-600 | bg-brand-600 |
@@ -22,12 +29,29 @@ HPTime - nền tảng SaaS hỗ trợ doanh nghiệp quản lý chấm công, th
 | Viền | #e5e7eb | --color-line | border-line |
 | Phông tiêu đề | Inter | --font-display | font-display |
 | Phông nội dung | Inter | --font-body | font-body |
-| H1 | Tailwind scale | - | text-5xl / lg:text-6xl |
-| H2 | Tailwind scale | - | text-xl |
 | Bo góc thẻ | 0.5rem | --radius-card | rounded-card |
 
-### Chạy project
+---
 
-```bash
-npm install
-npm run dev
+# Buổi 2 - Flexbox và Grid
+
+Trang chủ được hoàn thiện bằng Flexbox và Grid.
+
+Các khu vực chính gồm:
+
+- Navbar
+- Hero
+- Customer Logos
+- Features
+- Statistics
+- Testimonial
+- Pricing
+- FAQ
+- Cách hoạt động
+- CTA
+- Footer
+
+Layout sử dụng container thống nhất:
+
+```html
+mx-auto w-full max-w-6xl px-5
