@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 
 <head>
-
   <meta charset="UTF-8" />
 
   <meta
@@ -12,9 +10,6 @@
   />
 
   <title>HPTime - SaaS chấm công thông minh</title>
-
-
-  <!-- FONT -->
 
   <link
     rel="preconnect"
@@ -32,54 +27,29 @@
     rel="stylesheet"
   />
 
-
-  <!-- TAILWIND OUTPUT -->
-
   <link
     rel="stylesheet"
     href="./dist/output.css"
   />
-
 </head>
 
 
-<body
-  class="
-    bg-surface
-    font-body
-    text-ink
-  "
->
+<body class="bg-surface font-body text-ink">
 
-
-  <!-- ==================================================
-       SKIP LINK
-  =================================================== -->
-
+  <!-- SKIP LINK -->
   <a
     href="#main"
-    class="
-      sr-only
-      focus:not-sr-only
-    "
+    class="sr-only focus:not-sr-only"
   >
     Bỏ qua đến nội dung chính
   </a>
 
 
-
   <!-- ==================================================
-       1. NAVBAR
+       NAVBAR
   =================================================== -->
 
-  <header
-    class="
-      w-full
-      border-b
-      border-line
-      bg-surface
-    "
-  >
+  <header class="w-full border-b border-line bg-surface">
 
     <nav aria-label="Điều hướng chính">
 
@@ -99,17 +69,10 @@
         "
       >
 
-
         <!-- LOGO -->
-
         <a
-          href="#home"
-          class="
-            flex
-            shrink-0
-            items-center
-            gap-3
-          "
+          href="./index.html"
+          class="flex shrink-0 items-center gap-3"
         >
 
           <span
@@ -128,7 +91,6 @@
             HP
           </span>
 
-
           <span
             class="
               whitespace-nowrap
@@ -144,9 +106,7 @@
         </a>
 
 
-
         <!-- DESKTOP MENU -->
-
         <ul
           class="
             hidden
@@ -160,77 +120,43 @@
           <li>
             <a
               href="#features"
-              class="
-                text-base
-                font-medium
-                text-ink
-                transition-colors
-                hover:text-accent-500
-              "
+              class="font-medium text-ink hover:text-accent-500"
             >
               Tính năng
             </a>
           </li>
 
-
           <li>
             <a
               href="#statistics"
-              class="
-                text-base
-                font-medium
-                text-ink
-                transition-colors
-                hover:text-accent-500
-              "
+              class="font-medium text-ink hover:text-accent-500"
             >
               Số liệu
             </a>
           </li>
 
-
           <li>
             <a
               href="#testimonials"
-              class="
-                text-base
-                font-medium
-                text-ink
-                transition-colors
-                hover:text-accent-500
-              "
+              class="font-medium text-ink hover:text-accent-500"
             >
               Khách hàng
             </a>
           </li>
 
-
           <li>
             <a
-              href="#pricing"
-              class="
-                text-base
-                font-medium
-                text-ink
-                transition-colors
-                hover:text-accent-500
-              "
+              href="./pricing.html"
+              class="font-medium text-ink hover:text-accent-500"
             >
               Bảng giá
             </a>
           </li>
 
-
           <li>
             <a
-              href="#contact"
-              class="
-                text-base
-                font-medium
-                text-ink
-                transition-colors
-                hover:text-accent-500
-              "
+              href="./contact.html"
+              class="font-medium text-ink hover:text-accent-500"
             >
               Liên hệ
             </a>
@@ -239,51 +165,25 @@
         </ul>
 
 
-
         <!-- RIGHT -->
-
-        <div
-          class="
-            ml-auto
-            flex
-            shrink-0
-            items-center
-            gap-2
-            sm:gap-3
-            lg:gap-4
-          "
-        >
+        <div class="ml-auto flex items-center gap-2 sm:gap-3 lg:gap-4">
 
           <a
             href="#"
-            class="
-              hidden
-              whitespace-nowrap
-              text-sm
-              font-medium
-              text-ink
-              lg:inline
-            "
+            class="hidden text-sm font-medium text-ink lg:inline"
           >
             Đăng nhập
           </a>
 
-
           <a
-            href="#cta"
-            class="
-              btn
-              btn-primary
-              hidden
-              sm:inline-flex
-            "
+            href="./contact.html"
+            class="btn btn-primary hidden sm:inline-flex"
           >
             Bắt đầu
           </a>
 
 
-          <!-- Hamburger placeholder -->
-
+          <!-- HAMBURGER -->
           <button
             type="button"
             aria-label="Mở menu điều hướng"
@@ -334,17 +234,13 @@
 
 
     <!-- ==================================================
-         2. HERO
+         HERO
     =================================================== -->
 
     <section
       id="home"
       aria-labelledby="hero-title"
-      class="
-        bg-surface
-        py-16
-        sm:py-20
-      "
+      class="bg-surface py-16 sm:py-20"
     >
 
       <div
@@ -362,31 +258,14 @@
         "
       >
 
-
         <!-- HERO LEFT -->
+        <div class="flex flex-col gap-8 sm:gap-10">
 
-        <div
-          class="
-            flex
-            flex-col
-            gap-8
-            sm:gap-10
-          "
-        >
-
-          <div
-            class="
-              flex
-              flex-col
-              gap-5
-              sm:gap-6
-            "
-          >
+          <div class="flex flex-col gap-5 sm:gap-6">
 
             <p class="eyebrow">
               SaaS chấm công cho doanh nghiệp
             </p>
-
 
             <h1
               id="hero-title"
@@ -406,12 +285,10 @@
               Quản lý dễ dàng
             </h1>
 
-
             <p
               class="
                 max-w-2xl
                 text-base
-                font-normal
                 leading-7
                 text-muted
                 sm:text-lg
@@ -427,9 +304,6 @@
           </div>
 
 
-
-          <!-- BUTTONS -->
-
           <div
             class="
               flex
@@ -442,22 +316,15 @@
           >
 
             <a
-              href="#cta"
-              class="
-                btn
-                btn-primary
-              "
+              href="./contact.html"
+              class="btn btn-primary"
             >
               Dùng thử miễn phí
             </a>
 
-
             <a
-              href="#pricing"
-              class="
-                btn
-                btn-ghost
-              "
+              href="./pricing.html"
+              class="btn btn-ghost"
             >
               Bảng giá & FAQ
             </a>
@@ -467,17 +334,8 @@
         </div>
 
 
-
         <!-- HERO RIGHT -->
-
-        <div
-          class="
-            flex
-            items-center
-            justify-center
-            lg:justify-end
-          "
-        >
+        <div class="flex items-center justify-center lg:justify-end">
 
           <div
             class="
@@ -508,17 +366,8 @@
               "
             >
 
-
               <!-- APP HEADER -->
-
-              <div
-                class="
-                  flex
-                  items-center
-                  justify-between
-                  gap-4
-                "
-              >
+              <div class="flex items-center justify-between gap-4">
 
                 <div class="flex flex-col gap-1">
 
@@ -526,26 +375,17 @@
                     Tổng quan hôm nay
                   </p>
 
-                  <h2
-                    class="
-                      text-lg
-                      font-bold
-                      text-ink
-                      sm:text-xl
-                    "
-                  >
+                  <h2 class="text-lg font-bold text-ink sm:text-xl">
                     Chấm công
                   </h2>
 
                 </div>
-
 
                 <span
                   class="
                     grid
                     h-10
                     w-10
-                    shrink-0
                     place-items-center
                     rounded-lg
                     bg-brand-600
@@ -560,17 +400,8 @@
               </div>
 
 
-
               <!-- STATUS -->
-
-              <div
-                class="
-                  grid
-                  grid-cols-1
-                  gap-4
-                  sm:grid-cols-2
-                "
-              >
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
                 <div
                   class="
@@ -583,22 +414,13 @@
                     sm:p-5
                   "
                 >
-
                   <p class="text-sm text-muted">
                     Đã check-in
                   </p>
 
-                  <p
-                    class="
-                      text-2xl
-                      font-bold
-                      text-accent-500
-                      sm:text-3xl
-                    "
-                  >
+                  <p class="text-2xl font-bold text-accent-500 sm:text-3xl">
                     128
                   </p>
-
                 </div>
 
 
@@ -613,30 +435,19 @@
                     sm:p-5
                   "
                 >
-
                   <p class="text-sm text-muted">
                     Đang làm việc
                   </p>
 
-                  <p
-                    class="
-                      text-2xl
-                      font-bold
-                      text-accent-500
-                      sm:text-3xl
-                    "
-                  >
+                  <p class="text-2xl font-bold text-accent-500 sm:text-3xl">
                     116
                   </p>
-
                 </div>
 
               </div>
 
 
-
               <!-- CHECK-IN -->
-
               <div
                 class="
                   flex
@@ -663,7 +474,6 @@
                   </p>
 
                 </div>
-
 
                 <span
                   class="
@@ -695,27 +505,16 @@
 
 
     <!-- ==================================================
-         3. CUSTOMER LOGOS
+         CUSTOMER LOGOS
     =================================================== -->
 
     <section
       id="customers"
       aria-labelledby="customers-title"
-      class="
-        bg-surface
-        py-16
-        sm:py-20
-      "
+      class="bg-surface py-16 sm:py-20"
     >
 
-      <div
-        class="
-          mx-auto
-          w-full
-          max-w-6xl
-          px-5
-        "
-      >
+      <div class="mx-auto w-full max-w-6xl px-5">
 
         <h2
           id="customers-title"
@@ -738,140 +537,33 @@
         >
 
           <li class="flex items-center gap-3 text-muted">
-            <span
-              class="
-                grid
-                h-10
-                w-10
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                font-bold
-                text-accent-500
-              "
-              aria-hidden="true"
-            >
-              N
-            </span>
-
-            <span class="text-base font-semibold sm:text-lg">
-              NovaOffice
-            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 font-bold text-accent-500" aria-hidden="true">N</span>
+            <span class="font-semibold sm:text-lg">NovaOffice</span>
           </li>
 
-
           <li class="flex items-center gap-3 text-muted">
-            <span
-              class="
-                grid
-                h-10
-                w-10
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                font-bold
-                text-accent-500
-              "
-              aria-hidden="true"
-            >
-              A
-            </span>
-
-            <span class="text-base font-semibold sm:text-lg">
-              AnPhat
-            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 font-bold text-accent-500" aria-hidden="true">A</span>
+            <span class="font-semibold sm:text-lg">AnPhat</span>
           </li>
 
-
           <li class="flex items-center gap-3 text-muted">
-            <span
-              class="
-                grid
-                h-10
-                w-10
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                font-bold
-                text-accent-500
-              "
-              aria-hidden="true"
-            >
-              G
-            </span>
-
-            <span class="text-base font-semibold sm:text-lg">
-              GreenMart
-            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 font-bold text-accent-500" aria-hidden="true">G</span>
+            <span class="font-semibold sm:text-lg">GreenMart</span>
           </li>
 
-
           <li class="flex items-center gap-3 text-muted">
-            <span
-              class="
-                grid
-                h-10
-                w-10
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                font-bold
-                text-accent-500
-              "
-              aria-hidden="true"
-            >
-              M
-            </span>
-
-            <span class="text-base font-semibold sm:text-lg">
-              MinhLong
-            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 font-bold text-accent-500" aria-hidden="true">M</span>
+            <span class="font-semibold sm:text-lg">MinhLong</span>
           </li>
 
-
           <li class="flex items-center gap-3 text-muted">
-            <span
-              class="
-                grid
-                h-10
-                w-10
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                font-bold
-                text-accent-500
-              "
-              aria-hidden="true"
-            >
-              S
-            </span>
-
-            <span class="text-base font-semibold sm:text-lg">
-              SunFood
-            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 font-bold text-accent-500" aria-hidden="true">S</span>
+            <span class="font-semibold sm:text-lg">SunFood</span>
           </li>
 
-
           <li class="flex items-center gap-3 text-muted">
-            <span
-              class="
-                grid
-                h-10
-                w-10
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                font-bold
-                text-accent-500
-              "
-              aria-hidden="true"
-            >
-              E
-            </span>
-
-            <span class="text-base font-semibold sm:text-lg">
-              EduPlus
-            </span>
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-50 font-bold text-accent-500" aria-hidden="true">E</span>
+            <span class="font-semibold sm:text-lg">EduPlus</span>
           </li>
 
         </ul>
@@ -883,16 +575,13 @@
 
 
     <!-- ==================================================
-         4. FEATURES
+         FEATURES
     =================================================== -->
 
     <section
       id="features"
       aria-labelledby="features-title"
-      class="
-        section
-        bg-surface-soft
-      "
+      class="section bg-surface-soft"
     >
 
       <div
@@ -917,7 +606,6 @@
           <h2
             id="features-title"
             class="
-              font-display
               text-3xl
               font-extrabold
               tracking-tight
@@ -928,16 +616,7 @@
             Mọi thứ bạn cần để quản lý chấm công
           </h2>
 
-
-          <p
-            class="
-              text-base
-              leading-7
-              text-muted
-              sm:text-lg
-              sm:leading-8
-            "
-          >
+          <p class="text-base leading-7 text-muted sm:text-lg sm:leading-8">
             Từ ghi nhận giờ làm đến tổng hợp báo cáo,
             HPTime giúp doanh nghiệp quản lý nhân sự
             trên một hệ thống thống nhất.
@@ -946,18 +625,9 @@
         </div>
 
 
+        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-        <ul
-          class="
-            grid
-            gap-6
-            sm:grid-cols-2
-            lg:grid-cols-3
-          "
-        >
-
-          <!-- FEATURE 1 -->
-
+          <!-- 1 -->
           <li class="card flex flex-col gap-4">
 
             <span
@@ -971,7 +641,6 @@
                 text-accent-500
               "
             >
-
               <svg
                 class="h-6 w-6"
                 viewBox="0 0 24 24"
@@ -983,7 +652,6 @@
                 <circle cx="12" cy="12" r="9"></circle>
                 <path d="M12 7v5l3 2"></path>
               </svg>
-
             </span>
 
             <h3 class="text-xl font-bold text-ink">
@@ -998,22 +666,10 @@
           </li>
 
 
-
-          <!-- FEATURE 2 -->
-
+          <!-- 2 -->
           <li class="card flex flex-col gap-4">
 
-            <span
-              class="
-                grid
-                h-11
-                w-11
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                text-accent-500
-              "
-            >
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-accent-500">
 
               <svg
                 class="h-6 w-6"
@@ -1024,9 +680,7 @@
                 aria-hidden="true"
               >
                 <rect x="4" y="5" width="16" height="15" rx="2"></rect>
-                <path d="M8 3v4"></path>
-                <path d="M16 3v4"></path>
-                <path d="M4 10h16"></path>
+                <path d="M8 3v4M16 3v4M4 10h16"></path>
               </svg>
 
             </span>
@@ -1043,22 +697,10 @@
           </li>
 
 
-
-          <!-- FEATURE 3 -->
-
+          <!-- 3 -->
           <li class="card flex flex-col gap-4">
 
-            <span
-              class="
-                grid
-                h-11
-                w-11
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                text-accent-500
-              "
-            >
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-accent-500">
 
               <svg
                 class="h-6 w-6"
@@ -1068,10 +710,7 @@
                 stroke-width="2"
                 aria-hidden="true"
               >
-                <path d="M4 19V9"></path>
-                <path d="M10 19V5"></path>
-                <path d="M16 19v-7"></path>
-                <path d="M22 19H2"></path>
+                <path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path>
               </svg>
 
             </span>
@@ -1081,29 +720,17 @@
             </h3>
 
             <p class="leading-7 text-muted">
-              Tổng hợp dữ liệu chấm công thành báo cáo
-              rõ ràng để quản lý theo dõi dễ dàng.
+              Tổng hợp dữ liệu thành báo cáo rõ ràng
+              để người quản lý theo dõi dễ dàng.
             </p>
 
           </li>
 
 
-
-          <!-- FEATURE 4 -->
-
+          <!-- 4 -->
           <li class="card flex flex-col gap-4">
 
-            <span
-              class="
-                grid
-                h-11
-                w-11
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                text-accent-500
-              "
-            >
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-accent-500">
 
               <svg
                 class="h-6 w-6"
@@ -1115,8 +742,7 @@
               >
                 <circle cx="9" cy="8" r="3"></circle>
                 <circle cx="17" cy="9" r="2"></circle>
-                <path d="M3 20c0-4 2-7 6-7s6 3 6 7"></path>
-                <path d="M15 14c3 0 5 2 5 5"></path>
+                <path d="M3 20c0-4 2-7 6-7s6 3 6 7M15 14c3 0 5 2 5 5"></path>
               </svg>
 
             </span>
@@ -1133,22 +759,10 @@
           </li>
 
 
-
-          <!-- FEATURE 5 -->
-
+          <!-- 5 -->
           <li class="card flex flex-col gap-4">
 
-            <span
-              class="
-                grid
-                h-11
-                w-11
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                text-accent-500
-              "
-            >
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-accent-500">
 
               <svg
                 class="h-6 w-6"
@@ -1176,22 +790,10 @@
           </li>
 
 
-
-          <!-- FEATURE 6 -->
-
+          <!-- 6 -->
           <li class="card flex flex-col gap-4">
 
-            <span
-              class="
-                grid
-                h-11
-                w-11
-                place-items-center
-                rounded-lg
-                bg-brand-50
-                text-accent-500
-              "
-            >
+            <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-accent-500">
 
               <svg
                 class="h-6 w-6"
@@ -1202,9 +804,7 @@
                 aria-hidden="true"
               >
                 <rect x="5" y="3" width="14" height="18" rx="2"></rect>
-                <path d="M9 7h6"></path>
-                <path d="M9 11h6"></path>
-                <path d="M9 15h3"></path>
+                <path d="M9 7h6M9 11h6M9 15h3"></path>
               </svg>
 
             </span>
@@ -1229,17 +829,13 @@
 
 
     <!-- ==================================================
-         5. STATISTICS
+         STATISTICS
     =================================================== -->
 
     <section
       id="statistics"
       aria-labelledby="statistics-title"
-      class="
-        bg-brand-100
-        py-16
-        sm:py-20
-      "
+      class="bg-brand-100 py-16 sm:py-20"
     >
 
       <div
@@ -1263,33 +859,17 @@
 
           <h2
             id="statistics-title"
-            class="
-              text-3xl
-              font-extrabold
-              tracking-tight
-              text-ink
-              sm:text-4xl
-            "
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
           >
             Một hệ thống, nhiều công việc được đơn giản hóa
           </h2>
 
-
-          <p
-            class="
-              text-base
-              leading-7
-              text-muted
-              sm:text-lg
-              sm:leading-8
-            "
-          >
+          <p class="text-base leading-7 text-muted sm:text-lg sm:leading-8">
             HPTime tập trung các thao tác quan trọng
             của quy trình chấm công trên cùng một nền tảng.
           </p>
 
         </div>
-
 
 
         <dl
@@ -1298,94 +878,30 @@
             grid-cols-1
             gap-y-8
             sm:grid-cols-2
-            sm:gap-y-10
             lg:grid-cols-4
             lg:divide-x
             lg:divide-line
           "
         >
 
-          <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
-
-            <dt class="order-2 text-sm text-muted">
-              Quy trình chấm công
-            </dt>
-
-            <dd
-              class="
-                order-1
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-            >
-              3 bước
-            </dd>
-
+          <div class="flex flex-col gap-2 px-4 text-center">
+            <dt class="order-2 text-sm text-muted">Quy trình chấm công</dt>
+            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">3 bước</dd>
           </div>
 
-
-          <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
-
-            <dt class="order-2 text-sm text-muted">
-              Quản lý tập trung
-            </dt>
-
-            <dd
-              class="
-                order-1
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-            >
-              1 nơi
-            </dd>
-
+          <div class="flex flex-col gap-2 px-4 text-center">
+            <dt class="order-2 text-sm text-muted">Quản lý tập trung</dt>
+            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">1 nơi</dd>
           </div>
 
-
-          <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
-
-            <dt class="order-2 text-sm text-muted">
-              Khả năng truy cập
-            </dt>
-
-            <dd
-              class="
-                order-1
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-            >
-              24/7
-            </dd>
-
+          <div class="flex flex-col gap-2 px-4 text-center">
+            <dt class="order-2 text-sm text-muted">Khả năng truy cập</dt>
+            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">24/7</dd>
           </div>
 
-
-          <div class="flex flex-col gap-2 px-4 text-center sm:px-6">
-
-            <dt class="order-2 text-sm text-muted">
-              Tổng hợp bảng công
-            </dt>
-
-            <dd
-              class="
-                order-1
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-            >
-              Tự động
-            </dd>
-
+          <div class="flex flex-col gap-2 px-4 text-center">
+            <dt class="order-2 text-sm text-muted">Tổng hợp bảng công</dt>
+            <dd class="order-1 text-3xl font-extrabold text-accent-500 sm:text-4xl">Tự động</dd>
           </div>
 
         </dl>
@@ -1397,26 +913,16 @@
 
 
     <!-- ==================================================
-         6. TESTIMONIAL
+         TESTIMONIAL
     =================================================== -->
 
     <section
       id="testimonials"
       aria-labelledby="testimonials-title"
-      class="
-        section
-        bg-surface
-      "
+      class="section bg-surface"
     >
 
-      <div
-        class="
-          mx-auto
-          w-full
-          max-w-6xl
-          px-5
-        "
-      >
+      <div class="mx-auto w-full max-w-6xl px-5">
 
         <h2
           id="testimonials-title"
@@ -1433,18 +939,13 @@
             max-w-3xl
             flex-col
             items-center
-            gap-5
+            gap-6
             text-center
-            sm:gap-6
           "
         >
 
           <span
-            class="
-              text-5xl
-              font-bold
-              text-accent-500
-            "
+            class="text-5xl font-bold text-accent-500"
             aria-hidden="true"
           >
             “
@@ -1466,26 +967,13 @@
           </blockquote>
 
 
-          <figcaption
-            class="
-              flex
-              flex-col
-              items-center
-              gap-1
-            "
-          >
+          <figcaption class="flex flex-col items-center gap-1">
 
             <span class="font-semibold text-ink">
               Nguyễn Minh Anh
             </span>
 
-            <cite
-              class="
-                text-sm
-                not-italic
-                text-muted
-              "
-            >
+            <cite class="text-sm not-italic text-muted">
               Quản lý nhân sự, doanh nghiệp bán lẻ
             </cite>
 
@@ -1500,16 +988,13 @@
 
 
     <!-- ==================================================
-         7. PRICING
+         PRICING PREVIEW
     =================================================== -->
 
     <section
       id="pricing"
       aria-labelledby="pricing-title"
-      class="
-        section
-        bg-surface-soft
-      "
+      class="section bg-surface-soft"
     >
 
       <div
@@ -1533,27 +1018,12 @@
 
           <h2
             id="pricing-title"
-            class="
-              text-3xl
-              font-extrabold
-              tracking-tight
-              text-ink
-              sm:text-4xl
-            "
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
           >
             Gói phù hợp với quy mô doanh nghiệp
           </h2>
 
-
-          <p
-            class="
-              text-base
-              leading-7
-              text-muted
-              sm:text-lg
-              sm:leading-8
-            "
-          >
+          <p class="text-base leading-7 text-muted sm:text-lg">
             Bắt đầu từ nhu cầu cơ bản và nâng cấp
             khi đội ngũ của bạn phát triển.
           </p>
@@ -1561,95 +1031,33 @@
         </div>
 
 
-
-        <ul
-          class="
-            grid
-            items-stretch
-            gap-6
-            lg:grid-cols-3
-          "
-        >
+        <ul class="grid items-stretch gap-6 lg:grid-cols-3">
 
           <!-- STARTER -->
-
-          <li
-            class="
-              card
-              flex
-              h-full
-              flex-col
-              gap-6
-              sm:gap-8
-              sm:p-8
-            "
-          >
+          <li class="card flex h-full flex-col gap-6 sm:gap-8 sm:p-8">
 
             <div class="flex flex-col gap-3">
-
-              <h3 class="text-2xl font-semibold text-ink">
-                Starter
-              </h3>
-
+              <h3 class="text-2xl font-semibold text-ink">Starter</h3>
               <p class="leading-7 text-muted">
                 Phù hợp với nhóm nhỏ hoặc doanh nghiệp mới bắt đầu.
               </p>
-
             </div>
 
-
-            <div class="flex flex-wrap items-end gap-2">
-
-              <span
-                class="
-                  text-4xl
-                  font-extrabold
-                  text-ink
-                  sm:text-5xl
-                "
-              >
-                0đ
-              </span>
-
-              <span class="text-muted">
-                / tháng
-              </span>
-
+            <div class="flex items-end gap-2">
+              <span class="text-4xl font-extrabold text-ink sm:text-5xl">0đ</span>
+              <span class="text-muted">/ tháng</span>
             </div>
-
 
             <ul class="flex flex-col gap-4">
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Tối đa 10 nhân viên</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Chấm công cơ bản</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Quản lý ca làm</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Báo cáo theo tháng</span>
-              </li>
-
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Tối đa 10 nhân viên</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Chấm công cơ bản</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Quản lý ca làm</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Báo cáo theo tháng</li>
             </ul>
 
-
             <a
-              href="#cta"
-              class="
-                btn
-                btn-ghost
-                mt-auto
-              "
+              href="./contact.html"
+              class="btn btn-ghost mt-auto"
             >
               Bắt đầu miễn phí
             </a>
@@ -1657,9 +1065,7 @@
           </li>
 
 
-
           <!-- BUSINESS -->
-
           <li
             class="
               card
@@ -1675,89 +1081,33 @@
             "
           >
 
-            <span
-              class="
-                badge
-                absolute
-                -top-3
-                left-4
-                sm:left-6
-              "
-            >
+            <span class="badge absolute -top-3 left-4 sm:left-6">
               Được chọn nhiều nhất
             </span>
 
-
             <div class="flex flex-col gap-3">
-
-              <h3 class="text-2xl font-semibold text-ink">
-                Business
-              </h3>
-
+              <h3 class="text-2xl font-semibold text-ink">Business</h3>
               <p class="leading-7 text-muted">
                 Dành cho doanh nghiệp cần quản lý nhân sự đầy đủ hơn.
               </p>
-
             </div>
 
-
-            <div class="flex flex-wrap items-end gap-2">
-
-              <span
-                class="
-                  text-4xl
-                  font-extrabold
-                  text-ink
-                  sm:text-5xl
-                "
-              >
-                499k
-              </span>
-
-              <span class="text-muted">
-                / tháng
-              </span>
-
+            <div class="flex items-end gap-2">
+              <span class="text-4xl font-extrabold text-ink sm:text-5xl">499k</span>
+              <span class="text-muted">/ tháng</span>
             </div>
-
 
             <ul class="flex flex-col gap-4">
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Tối đa 100 nhân viên</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Quản lý nhiều ca làm</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Dashboard và báo cáo</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Phân quyền quản lý</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Hỗ trợ ưu tiên</span>
-              </li>
-
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Tối đa 100 nhân viên</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Quản lý nhiều ca</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Dashboard và báo cáo</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Phân quyền quản lý</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Hỗ trợ ưu tiên</li>
             </ul>
 
-
             <a
-              href="#cta"
-              class="
-                btn
-                btn-primary
-                mt-auto
-              "
+              href="./contact.html"
+              class="btn btn-primary mt-auto"
             >
               Chọn Business
             </a>
@@ -1765,82 +1115,32 @@
           </li>
 
 
-
           <!-- ENTERPRISE -->
-
-          <li
-            class="
-              card
-              flex
-              h-full
-              flex-col
-              gap-6
-              sm:gap-8
-              sm:p-8
-            "
-          >
+          <li class="card flex h-full flex-col gap-6 sm:gap-8 sm:p-8">
 
             <div class="flex flex-col gap-3">
-
-              <h3 class="text-2xl font-semibold text-ink">
-                Enterprise
-              </h3>
-
+              <h3 class="text-2xl font-semibold text-ink">Enterprise</h3>
               <p class="leading-7 text-muted">
                 Dành cho doanh nghiệp lớn với nhu cầu triển khai riêng.
               </p>
-
             </div>
 
-
-            <div class="flex items-end gap-2">
-
-              <span
-                class="
-                  text-3xl
-                  font-extrabold
-                  text-ink
-                  sm:text-4xl
-                "
-              >
+            <div>
+              <span class="text-3xl font-extrabold text-ink sm:text-4xl">
                 Liên hệ
               </span>
-
             </div>
 
-
             <ul class="flex flex-col gap-4">
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Không giới hạn nhân viên</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Phân quyền nâng cao</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Báo cáo tùy chỉnh</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span class="text-accent-500" aria-hidden="true">✓</span>
-                <span>Hỗ trợ triển khai</span>
-              </li>
-
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Không giới hạn nhân viên</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Phân quyền nâng cao</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Báo cáo tùy chỉnh</li>
+              <li class="flex gap-3"><span class="text-accent-500">✓</span>Hỗ trợ triển khai</li>
             </ul>
 
-
             <a
-              href="#contact"
-              class="
-                btn
-                btn-ghost
-                mt-auto
-              "
+              href="./contact.html"
+              class="btn btn-ghost mt-auto"
             >
               Liên hệ tư vấn
             </a>
@@ -1849,6 +1149,18 @@
 
         </ul>
 
+
+        <div class="flex justify-center">
+
+          <a
+            href="./pricing.html"
+            class="btn btn-ghost"
+          >
+            Xem chi tiết các gói
+          </a>
+
+        </div>
+
       </div>
 
     </section>
@@ -1856,16 +1168,13 @@
 
 
     <!-- ==================================================
-         8. FAQ
+         FAQ
     =================================================== -->
 
     <section
       id="faq"
       aria-labelledby="faq-title"
-      class="
-        section
-        bg-surface
-      "
+      class="section bg-surface"
     >
 
       <div
@@ -1889,27 +1198,12 @@
 
           <h2
             id="faq-title"
-            class="
-              text-3xl
-              font-extrabold
-              tracking-tight
-              text-ink
-              sm:text-4xl
-            "
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
           >
             Câu hỏi thường gặp
           </h2>
 
-
-          <p
-            class="
-              text-base
-              leading-7
-              text-muted
-              sm:text-lg
-              sm:leading-8
-            "
-          >
+          <p class="leading-7 text-muted">
             Một số câu hỏi phổ biến khi doanh nghiệp
             bắt đầu sử dụng hệ thống chấm công trực tuyến.
           </p>
@@ -1917,92 +1211,36 @@
         </div>
 
 
-        <div
-          class="
-            divide-y
-            divide-line
-            border-y
-            border-line
-          "
-        >
+        <div class="divide-y divide-line border-y border-line">
 
           <details class="py-5 sm:py-6">
-
-            <summary
-              class="
-                cursor-pointer
-                font-semibold
-                text-ink
-              "
-            >
+            <summary class="cursor-pointer font-semibold text-ink">
               HPTime có phù hợp với doanh nghiệp nhỏ không?
             </summary>
-
             <p class="pt-4 leading-7 text-muted">
               Có. Doanh nghiệp có thể bắt đầu với gói cơ bản
               và nâng cấp khi số lượng nhân viên tăng.
             </p>
-
           </details>
 
-
           <details class="py-5 sm:py-6">
-
-            <summary
-              class="
-                cursor-pointer
-                font-semibold
-                text-ink
-              "
-            >
+            <summary class="cursor-pointer font-semibold text-ink">
               Có thể quản lý nhiều ca làm việc không?
             </summary>
-
             <p class="pt-4 leading-7 text-muted">
-              HPTime cho phép tạo nhiều ca làm việc
-              và phân công cho từng nhân viên hoặc phòng ban.
+              HPTime cho phép tạo nhiều ca làm việc và
+              phân công cho từng nhân viên hoặc phòng ban.
             </p>
-
           </details>
 
-
           <details class="py-5 sm:py-6">
-
-            <summary
-              class="
-                cursor-pointer
-                font-semibold
-                text-ink
-              "
-            >
-              Dữ liệu chấm công được tổng hợp như thế nào?
-            </summary>
-
-            <p class="pt-4 leading-7 text-muted">
-              Dữ liệu được lưu theo từng ngày và có thể
-              tổng hợp thành báo cáo phục vụ quản lý.
-            </p>
-
-          </details>
-
-
-          <details class="py-5 sm:py-6">
-
-            <summary
-              class="
-                cursor-pointer
-                font-semibold
-                text-ink
-              "
-            >
+            <summary class="cursor-pointer font-semibold text-ink">
               Tôi có thể thay đổi gói sử dụng không?
             </summary>
-
             <p class="pt-4 leading-7 text-muted">
               Có. Doanh nghiệp có thể nâng cấp gói khi
-              quy mô nhân sự hoặc nhu cầu quản lý thay đổi.
+              quy mô nhân sự hoặc nhu cầu thay đổi.
             </p>
-
           </details>
 
         </div>
@@ -2020,10 +1258,7 @@
     <section
       id="how-it-works"
       aria-labelledby="how-it-works-title"
-      class="
-        section
-        bg-surface-soft
-      "
+      class="section bg-surface-soft"
     >
 
       <div
@@ -2035,7 +1270,6 @@
           flex-col
           gap-10
           px-5
-          sm:gap-12
         "
       >
 
@@ -2047,140 +1281,38 @@
 
           <h2
             id="how-it-works-title"
-            class="
-              text-3xl
-              font-extrabold
-              tracking-tight
-              text-ink
-              sm:text-4xl
-            "
+            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
           >
             Bắt đầu với HPTime chỉ trong 3 bước
           </h2>
 
-          <p
-            class="
-              text-base
-              leading-7
-              text-muted
-              sm:text-lg
-              sm:leading-8
-            "
-          >
-            Thiết lập hệ thống đơn giản để doanh nghiệp
-            nhanh chóng đưa HPTime vào sử dụng.
-          </p>
-
         </div>
 
 
-        <ol
-          class="
-            grid
-            gap-6
-            lg:grid-cols-3
-          "
-        >
+        <ol class="grid gap-6 lg:grid-cols-3">
 
-          <li
-            class="
-              card
-              flex
-              flex-col
-              gap-5
-              sm:p-8
-            "
-          >
-
-            <span
-              class="
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-              aria-hidden="true"
-            >
-              01
-            </span>
-
-            <h3 class="text-xl font-bold text-ink">
-              Tạo doanh nghiệp
-            </h3>
-
+          <li class="card flex flex-col gap-5 sm:p-8">
+            <span class="text-3xl font-extrabold text-accent-500">01</span>
+            <h3 class="text-xl font-bold text-ink">Tạo doanh nghiệp</h3>
             <p class="leading-7 text-muted">
-              Khởi tạo tài khoản và thiết lập
-              thông tin cơ bản của doanh nghiệp.
+              Khởi tạo tài khoản và thiết lập thông tin cơ bản.
             </p>
-
           </li>
 
-
-          <li
-            class="
-              card
-              flex
-              flex-col
-              gap-5
-              sm:p-8
-            "
-          >
-
-            <span
-              class="
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-              aria-hidden="true"
-            >
-              02
-            </span>
-
-            <h3 class="text-xl font-bold text-ink">
-              Thêm nhân viên và ca
-            </h3>
-
+          <li class="card flex flex-col gap-5 sm:p-8">
+            <span class="text-3xl font-extrabold text-accent-500">02</span>
+            <h3 class="text-xl font-bold text-ink">Thêm nhân viên và ca</h3>
             <p class="leading-7 text-muted">
-              Tạo hồ sơ nhân viên và phân công
-              lịch làm việc phù hợp.
+              Tạo hồ sơ nhân viên và phân công lịch làm việc.
             </p>
-
           </li>
 
-
-          <li
-            class="
-              card
-              flex
-              flex-col
-              gap-5
-              sm:p-8
-            "
-          >
-
-            <span
-              class="
-                text-3xl
-                font-extrabold
-                text-accent-500
-                sm:text-4xl
-              "
-              aria-hidden="true"
-            >
-              03
-            </span>
-
-            <h3 class="text-xl font-bold text-ink">
-              Bắt đầu chấm công
-            </h3>
-
+          <li class="card flex flex-col gap-5 sm:p-8">
+            <span class="text-3xl font-extrabold text-accent-500">03</span>
+            <h3 class="text-xl font-bold text-ink">Bắt đầu chấm công</h3>
             <p class="leading-7 text-muted">
-              Nhân viên bắt đầu ghi nhận giờ làm
-              và quản lý theo dõi báo cáo trực tiếp.
+              Nhân viên ghi nhận giờ làm và quản lý theo dõi báo cáo.
             </p>
-
           </li>
 
         </ol>
@@ -2192,16 +1324,12 @@
 
 
     <!-- ==================================================
-         9. CTA
+         CTA
     =================================================== -->
 
     <section
-      id="cta"
+      class="section bg-brand-100"
       aria-labelledby="cta-title"
-      class="
-        section
-        bg-brand-100
-      "
     >
 
       <div
@@ -2220,65 +1348,48 @@
 
         <h2
           id="cta-title"
-          class="
-            text-3xl
-            font-extrabold
-            tracking-tight
-            text-ink
-            sm:text-4xl
-          "
+          class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
         >
           Bắt đầu quản lý chấm công dễ dàng hơn
         </h2>
 
-
-        <p
-          class="
-            text-base
-            leading-7
-            text-muted
-            sm:text-lg
-            sm:leading-8
-          "
-        >
+        <p class="text-base leading-7 text-muted sm:text-lg">
           Trải nghiệm HPTime và xây dựng quy trình
           quản lý giờ làm rõ ràng cho doanh nghiệp của bạn.
         </p>
 
 
-        <a
-          href="#pricing"
-          class="
-            btn
-            btn-primary
-            w-full
-            sm:w-auto
-          "
-        >
-          Dùng thử miễn phí
-        </a>
+        <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+
+          <a
+            href="./contact.html"
+            class="btn btn-primary"
+          >
+            Liên hệ HPTime
+          </a>
+
+          <a
+            href="./pricing.html"
+            class="btn btn-ghost"
+          >
+            Xem bảng giá
+          </a>
+
+        </div>
 
       </div>
 
     </section>
-
 
   </main>
 
 
 
   <!-- ==================================================
-       10. FOOTER
+       FOOTER
   =================================================== -->
 
-  <footer
-    id="contact"
-    class="
-      bg-surface
-      py-16
-      sm:py-20
-    "
-  >
+  <footer class="bg-surface py-16 sm:py-20">
 
     <div
       class="
@@ -2289,57 +1400,28 @@
         flex-col
         gap-10
         px-5
-        sm:gap-12
       "
     >
 
-      <div
-        class="
-          grid
-          grid-cols-1
-          gap-10
-          sm:grid-cols-2
-          lg:grid-cols-4
-        "
-      >
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
         <!-- BRAND -->
-
         <div class="flex flex-col gap-4">
 
           <a
-            href="#home"
-            class="
-              flex
-              items-center
-              gap-3
-            "
+            href="./index.html"
+            class="flex items-center gap-3"
           >
-
-            <span
-              class="
-                grid
-                h-9
-                w-9
-                place-items-center
-                rounded-lg
-                bg-brand-600
-                text-sm
-                font-extrabold
-                text-accent-500
-              "
-            >
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 font-extrabold text-accent-500">
               HP
             </span>
 
             <span class="text-2xl font-semibold text-ink">
               HPTime
             </span>
-
           </a>
 
-
-          <p class="max-w-xs leading-7 text-muted">
+          <p class="leading-7 text-muted">
             Giải pháp SaaS hỗ trợ doanh nghiệp
             quản lý chấm công và ca làm hiệu quả.
           </p>
@@ -2347,25 +1429,17 @@
         </div>
 
 
-
         <!-- PRODUCT -->
-
-        <nav aria-labelledby="footer-product-title">
+        <nav aria-labelledby="footer-product">
 
           <div class="flex flex-col gap-4">
 
             <h2
-              id="footer-product-title"
-              class="
-                text-sm
-                font-semibold
-                uppercase
-                text-ink
-              "
+              id="footer-product"
+              class="text-sm font-semibold uppercase text-ink"
             >
               Sản phẩm
             </h2>
-
 
             <ul class="flex flex-col gap-3 text-muted">
 
@@ -2376,7 +1450,7 @@
               </li>
 
               <li>
-                <a href="#pricing" class="hover:text-accent-500">
+                <a href="./pricing.html" class="hover:text-accent-500">
                   Bảng giá
                 </a>
               </li>
@@ -2394,43 +1468,29 @@
         </nav>
 
 
-
         <!-- SUPPORT -->
-
-        <nav aria-labelledby="footer-support-title">
+        <nav aria-labelledby="footer-support">
 
           <div class="flex flex-col gap-4">
 
             <h2
-              id="footer-support-title"
-              class="
-                text-sm
-                font-semibold
-                uppercase
-                text-ink
-              "
+              id="footer-support"
+              class="text-sm font-semibold uppercase text-ink"
             >
               Hỗ trợ
             </h2>
-
 
             <ul class="flex flex-col gap-3 text-muted">
 
               <li>
                 <a href="#faq" class="hover:text-accent-500">
-                  Câu hỏi thường gặp
+                  FAQ
                 </a>
               </li>
 
               <li>
-                <a href="#contact" class="hover:text-accent-500">
+                <a href="./contact.html" class="hover:text-accent-500">
                   Liên hệ
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="hover:text-accent-500">
-                  Điều khoản sử dụng
                 </a>
               </li>
 
@@ -2441,71 +1501,37 @@
         </nav>
 
 
-
         <!-- CONTACT -->
+        <address class="flex flex-col gap-3 not-italic text-muted">
 
-        <div class="flex flex-col gap-4">
-
-          <h2
-            class="
-              text-sm
-              font-semibold
-              uppercase
-              text-ink
-            "
-          >
+          <p class="font-semibold text-ink">
             Liên hệ
-          </h2>
+          </p>
 
+          <p>
+            TP. Hồ Chí Minh, Việt Nam
+          </p>
 
-          <address
-            class="
-              flex
-              flex-col
-              gap-3
-              not-italic
-              text-muted
-            "
+          <a
+            href="mailto:support@hptime.vn"
+            class="break-all hover:text-accent-500"
           >
+            support@hptime.vn
+          </a>
 
-            <p>
-              TP. Hồ Chí Minh, Việt Nam
-            </p>
+          <a
+            href="tel:+842812345678"
+            class="hover:text-accent-500"
+          >
+            (028) 1234 5678
+          </a>
 
-            <a
-              href="mailto:support@hptime.vn"
-              class="
-                break-all
-                hover:text-accent-500
-              "
-            >
-              support@hptime.vn
-            </a>
-
-            <a
-              href="tel:+842812345678"
-              class="hover:text-accent-500"
-            >
-              (028) 1234 5678
-            </a>
-
-          </address>
-
-        </div>
+        </address>
 
       </div>
 
 
-      <div
-        class="
-          border-t
-          border-line
-          pt-8
-          text-center
-          text-sm
-          text-muted
-        "
-      >
+      <div class="border-t border-line pt-8 text-center text-sm text-muted">
         © 2026 HPTime. All rights reserved.
       </div>
 
@@ -2513,7 +1539,5 @@
 
   </footer>
 
-
 </body>
-
 </html>
