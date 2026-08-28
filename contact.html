@@ -11,6 +11,34 @@
 
   <title>Liên hệ - HPTime</title>
 
+  <!-- Không để trình duyệt tự tìm favicon.ico -->
+  <link rel="icon" href="data:," />
+
+  <!-- DARK MODE TRƯỚC KHI TRÌNH DUYỆT VẼ TRANG -->
+  <script>
+    (function () {
+      let saved = null;
+
+      try {
+        saved = localStorage.getItem("theme");
+      }
+      catch {
+        saved = null;
+      }
+
+      const dark = saved
+        ? saved === "dark"
+        : window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+
+      document.documentElement.classList.toggle(
+        "dark",
+        dark
+      );
+    })();
+  </script>
+
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -33,8 +61,12 @@
   />
 </head>
 
-
 <body class="bg-surface font-body text-ink">
+
+  <div
+    id="nav-sentinel"
+    aria-hidden="true"
+  ></div>
 
   <a
     href="#main"
@@ -43,9 +75,19 @@
     Bỏ qua đến nội dung chính
   </a>
 
-
-  <!-- NAVBAR -->
-  <header class="w-full border-b border-line bg-surface">
+  <header
+    data-site-header
+    class="
+      sticky
+      top-0
+      z-40
+      w-full
+      border-b
+      border-line
+      bg-surface
+      transition-shadow
+    "
+  >
 
     <nav aria-label="Điều hướng chính">
 
@@ -85,14 +127,28 @@
             HP
           </span>
 
-          <span class="text-xl font-semibold text-ink sm:text-2xl">
+          <span
+            class="
+              text-xl
+              font-semibold
+              text-ink
+              sm:text-2xl
+            "
+          >
             HPTime
           </span>
 
         </a>
 
-
-        <ul class="hidden flex-1 items-center gap-8 lg:flex">
+        <ul
+          class="
+            hidden
+            flex-1
+            items-center
+            gap-8
+            lg:flex
+          "
+        >
 
           <li>
             <a
@@ -124,8 +180,47 @@
 
         </ul>
 
+        <div
+          class="
+            ml-auto
+            flex
+            items-center
+            gap-2
+            sm:gap-3
+          "
+        >
 
-        <div class="ml-auto flex items-center gap-3">
+          <button
+            data-theme-toggle
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Chuyển sang chế độ tối"
+            class="
+              grid
+              h-10
+              w-10
+              shrink-0
+              place-items-center
+              rounded-lg
+              border
+              border-line
+              bg-surface
+              text-lg
+              text-ink
+              hover:bg-surface-soft
+              focus-visible:outline-2
+              focus-visible:outline-offset-2
+              focus-visible:outline-accent-500
+            "
+          >
+            <span
+              data-theme-icon
+              aria-hidden="true"
+            >
+              ☾
+            </span>
+          </button>
 
           <a
             href="./pricing.html"
@@ -134,10 +229,12 @@
             Xem bảng giá
           </a>
 
-
           <button
+            data-nav-toggle
             type="button"
-            aria-label="Mở menu điều hướng"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Mở menu"
             class="
               grid
               h-10
@@ -148,19 +245,13 @@
               border-line
               bg-surface
               text-ink
+              focus-visible:outline-2
+              focus-visible:outline-offset-2
+              focus-visible:outline-accent-500
               lg:hidden
             "
           >
-            <svg
-              class="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path d="M4 7h16M4 12h16M4 17h16"></path>
-            </svg>
+            ☰
           </button>
 
         </div>
@@ -169,14 +260,94 @@
 
     </nav>
 
+    <nav
+      id="mobile-menu"
+      data-mobile-menu
+      aria-label="Điều hướng di động"
+      class="
+        hidden
+        border-t
+        border-line
+        bg-surface
+        lg:hidden
+      "
+    >
+
+      <ul
+        class="
+          mx-auto
+          flex
+          w-full
+          max-w-6xl
+          flex-col
+          gap-1
+          px-5
+          py-4
+        "
+      >
+
+        <li>
+          <a
+            href="./index.html#features"
+            class="
+              block
+              rounded-lg
+              px-4
+              py-3
+              font-medium
+              text-ink
+              hover:bg-surface-soft
+            "
+          >
+            Tính năng
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./pricing.html"
+            class="
+              block
+              rounded-lg
+              px-4
+              py-3
+              font-medium
+              text-ink
+              hover:bg-surface-soft
+            "
+          >
+            Bảng giá
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./contact.html"
+            aria-current="page"
+            class="
+              block
+              rounded-lg
+              bg-surface-soft
+              px-4
+              py-3
+              font-semibold
+              text-accent-500
+            "
+          >
+            Liên hệ
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
   </header>
-
-
 
   <main id="main">
 
-    <!-- PAGE HEADER -->
     <section
+      data-reveal
       class="section bg-surface"
       aria-labelledby="contact-title"
     >
@@ -212,7 +383,15 @@
           Trao đổi với đội ngũ HPTime
         </h1>
 
-        <p class="text-base leading-7 text-muted sm:text-lg sm:leading-8">
+        <p
+          class="
+            text-base
+            leading-7
+            text-muted
+            sm:text-lg
+            sm:leading-8
+          "
+        >
           Hãy cho chúng tôi biết nhu cầu của doanh nghiệp.
           Đội ngũ HPTime sẽ hỗ trợ bạn tìm giải pháp phù hợp.
         </p>
@@ -221,10 +400,8 @@
 
     </section>
 
-
-
-    <!-- CONTACT + FORM -->
     <section
+      data-reveal
       class="section bg-surface-soft"
       aria-labelledby="form-title"
     >
@@ -242,7 +419,6 @@
         "
       >
 
-        <!-- CONTACT INFO -->
         <div class="flex flex-col gap-8">
 
           <div class="flex flex-col gap-4">
@@ -253,7 +429,13 @@
 
             <h2
               id="form-title"
-              class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
+              class="
+                text-3xl
+                font-extrabold
+                tracking-tight
+                text-ink
+                sm:text-4xl
+              "
             >
               Chúng tôi có thể giúp gì cho bạn?
             </h2>
@@ -265,52 +447,129 @@
 
           </div>
 
+          <address
+            class="
+              flex
+              flex-col
+              gap-4
+              not-italic
+            "
+          >
 
-          <address class="flex flex-col gap-4 not-italic">
+            <div
+              data-copy-root
+              class="
+                card
+                flex
+                flex-col
+                gap-3
+              "
+            >
 
-            <div class="card flex flex-col gap-2">
-              <p class="font-semibold text-ink">Email</p>
+              <p class="font-semibold text-ink">
+                Email
+              </p>
+
               <a
                 href="mailto:support@hptime.vn"
-                class="break-all text-muted hover:text-accent-500"
+                class="
+                  break-all
+                  text-muted
+                  hover:text-accent-500
+                "
               >
                 support@hptime.vn
               </a>
+
+              <div
+                class="
+                  flex
+                  flex-wrap
+                  items-center
+                  gap-3
+                "
+              >
+
+                <button
+                  data-copy-email
+                  data-copy-value="support@hptime.vn"
+                  type="button"
+                  class="btn btn-ghost"
+                >
+                  Sao chép email
+                </button>
+
+                <p
+                  data-copy-status
+                  role="status"
+                  aria-live="polite"
+                  class="text-sm text-muted"
+                ></p>
+
+              </div>
+
             </div>
 
+            <div
+              class="
+                card
+                flex
+                flex-col
+                gap-2
+              "
+            >
 
-            <div class="card flex flex-col gap-2">
-              <p class="font-semibold text-ink">Điện thoại</p>
+              <p class="font-semibold text-ink">
+                Điện thoại
+              </p>
+
               <a
                 href="tel:+842812345678"
-                class="text-muted hover:text-accent-500"
+                class="
+                  text-muted
+                  hover:text-accent-500
+                "
               >
                 (028) 1234 5678
               </a>
+
             </div>
 
+            <div
+              class="
+                card
+                flex
+                flex-col
+                gap-2
+              "
+            >
 
-            <div class="card flex flex-col gap-2">
-              <p class="font-semibold text-ink">Văn phòng</p>
+              <p class="font-semibold text-ink">
+                Văn phòng
+              </p>
+
               <p class="text-muted">
                 TP. Hồ Chí Minh, Việt Nam
               </p>
+
             </div>
 
           </address>
 
         </div>
 
-
-
-        <!-- FORM -->
         <form
           action="#"
           method="post"
-          class="card flex flex-col gap-6 sm:p-8"
+          class="
+            card
+            flex
+            flex-col
+            gap-6
+            sm:p-8
+          "
         >
 
-          <!-- 1 -->
           <div class="flex flex-col gap-2">
 
             <label
@@ -318,7 +577,13 @@
               class="field-label"
             >
               Họ và tên
-              <span class="text-red-600" aria-hidden="true">*</span>
+
+              <span
+                class="text-red-600"
+                aria-hidden="true"
+              >
+                *
+              </span>
             </label>
 
             <input
@@ -340,9 +605,6 @@
 
           </div>
 
-
-
-          <!-- 2 -->
           <div class="flex flex-col gap-2">
 
             <label
@@ -350,7 +612,13 @@
               class="field-label"
             >
               Số điện thoại
-              <span class="text-red-600" aria-hidden="true">*</span>
+
+              <span
+                class="text-red-600"
+                aria-hidden="true"
+              >
+                *
+              </span>
             </label>
 
             <input
@@ -380,9 +648,6 @@
 
           </div>
 
-
-
-          <!-- 3 -->
           <div class="flex flex-col gap-2">
 
             <label
@@ -390,7 +655,13 @@
               class="field-label"
             >
               Email
-              <span class="text-red-600" aria-hidden="true">*</span>
+
+              <span
+                class="text-red-600"
+                aria-hidden="true"
+              >
+                *
+              </span>
             </label>
 
             <input
@@ -412,9 +683,6 @@
 
           </div>
 
-
-
-          <!-- 4 -->
           <div class="flex flex-col gap-2">
 
             <label
@@ -434,9 +702,6 @@
 
           </div>
 
-
-
-          <!-- 5 -->
           <div class="flex flex-col gap-2">
 
             <label
@@ -444,7 +709,13 @@
               class="field-label"
             >
               Quy mô nhân sự
-              <span class="text-red-600" aria-hidden="true">*</span>
+
+              <span
+                class="text-red-600"
+                aria-hidden="true"
+              >
+                *
+              </span>
             </label>
 
             <select
@@ -482,9 +753,6 @@
 
           </div>
 
-
-
-          <!-- 6 -->
           <div class="flex flex-col gap-2">
 
             <label
@@ -492,13 +760,23 @@
               class="field-label"
             >
               Nội dung cần tư vấn
-              <span class="text-red-600" aria-hidden="true">*</span>
+
+              <span
+                class="text-red-600"
+                aria-hidden="true"
+              >
+                *
+              </span>
             </label>
 
             <textarea
               id="noi-dung"
               name="noiDung"
-              class="field-input min-h-36 resize-y"
+              class="
+                field-input
+                min-h-36
+                resize-y
+              "
               required
               rows="6"
               aria-describedby="noi-dung-hint"
@@ -513,9 +791,6 @@
 
           </div>
 
-
-
-          <!-- 7 -->
           <div class="flex items-start gap-3">
 
             <input
@@ -524,6 +799,7 @@
               type="checkbox"
               required
               class="
+                mt-1
                 h-5
                 w-5
                 shrink-0
@@ -536,7 +812,11 @@
 
             <label
               for="dong-y"
-              class="text-sm leading-6 text-muted"
+              class="
+                text-sm
+                leading-6
+                text-muted
+              "
             >
               Tôi đồng ý để HPTime sử dụng thông tin trên
               nhằm liên hệ và hỗ trợ yêu cầu của tôi.
@@ -544,12 +824,15 @@
 
           </div>
 
-
-
-          <!-- SUBMIT -->
           <button
             type="submit"
-            class="btn btn-primary w-full sm:w-auto sm:self-start"
+            class="
+              btn
+              btn-primary
+              w-full
+              sm:w-auto
+              sm:self-start
+            "
           >
             Gửi yêu cầu
           </button>
@@ -560,10 +843,8 @@
 
     </section>
 
-
-
-    <!-- AFTER SUBMIT -->
     <section
+      data-reveal
       class="section bg-surface"
       aria-labelledby="after-submit-title"
     >
@@ -588,13 +869,18 @@
 
           <h2
             id="after-submit-title"
-            class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
+            class="
+              text-3xl
+              font-extrabold
+              tracking-tight
+              text-ink
+              sm:text-4xl
+            "
           >
             Điều gì sẽ xảy ra tiếp theo?
           </h2>
 
         </div>
-
 
         <ol class="grid gap-6 lg:grid-cols-3">
 
@@ -615,7 +901,6 @@
 
           </li>
 
-
           <li class="card flex flex-col gap-4">
 
             <span class="text-3xl font-extrabold text-accent-500">
@@ -632,7 +917,6 @@
             </p>
 
           </li>
-
 
           <li class="card flex flex-col gap-4">
 
@@ -659,10 +943,13 @@
 
   </main>
 
-
-
-  <!-- FOOTER -->
-  <footer class="bg-surface-soft py-16 sm:py-20">
+  <footer
+    class="
+      bg-surface-soft
+      py-16
+      sm:py-20
+    "
+  >
 
     <div
       class="
@@ -684,13 +971,26 @@
           href="./index.html"
           class="flex items-center gap-3"
         >
-          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 font-bold text-accent-500">
+
+          <span
+            class="
+              grid
+              h-9
+              w-9
+              place-items-center
+              rounded-lg
+              bg-brand-600
+              font-bold
+              text-accent-500
+            "
+          >
             HP
           </span>
 
           <span class="text-2xl font-semibold text-ink">
             HPTime
           </span>
+
         </a>
 
         <p class="leading-7 text-muted">
@@ -699,50 +999,89 @@
 
       </div>
 
-
-      <nav aria-labelledby="contact-product">
+      <nav aria-labelledby="footer-product">
 
         <div class="flex flex-col gap-4">
 
           <h2
-            id="contact-product"
+            id="footer-product"
             class="font-semibold text-ink"
           >
             Sản phẩm
           </h2>
 
           <ul class="flex flex-col gap-3 text-muted">
-            <li><a href="./index.html#features" class="hover:text-accent-500">Tính năng</a></li>
-            <li><a href="./pricing.html" class="hover:text-accent-500">Bảng giá</a></li>
+
+            <li>
+              <a
+                href="./index.html#features"
+                class="hover:text-accent-500"
+              >
+                Tính năng
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./pricing.html"
+                class="hover:text-accent-500"
+              >
+                Bảng giá
+              </a>
+            </li>
+
           </ul>
 
         </div>
 
       </nav>
 
-
-      <nav aria-labelledby="contact-support">
+      <nav aria-labelledby="footer-support">
 
         <div class="flex flex-col gap-4">
 
           <h2
-            id="contact-support"
+            id="footer-support"
             class="font-semibold text-ink"
           >
             Hỗ trợ
           </h2>
 
           <ul class="flex flex-col gap-3 text-muted">
-            <li><a href="./contact.html" class="hover:text-accent-500">Liên hệ</a></li>
-            <li><a href="./index.html#faq" class="hover:text-accent-500">FAQ</a></li>
+
+            <li>
+              <a
+                href="./contact.html"
+                class="hover:text-accent-500"
+              >
+                Liên hệ
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./index.html#faq"
+                class="hover:text-accent-500"
+              >
+                FAQ
+              </a>
+            </li>
+
           </ul>
 
         </div>
 
       </nav>
 
-
-      <address class="flex flex-col gap-3 not-italic text-muted">
+      <address
+        class="
+          flex
+          flex-col
+          gap-3
+          not-italic
+          text-muted
+        "
+      >
 
         <p class="font-semibold text-ink">
           Liên hệ
@@ -771,6 +1110,38 @@
     </div>
 
   </footer>
+
+  <button
+    data-to-top
+    type="button"
+    aria-label="Lên đầu trang"
+    class="
+      fixed
+      bottom-5
+      right-5
+      z-50
+      hidden
+      h-12
+      w-12
+      rounded-full
+      border
+      border-line
+      bg-surface
+      text-ink
+      shadow-lg
+      hover:bg-surface-soft
+      focus-visible:outline-2
+      focus-visible:outline-offset-2
+      focus-visible:outline-accent-500
+    "
+  >
+    ↑
+  </button>
+
+  <script
+    type="module"
+    src="./js/main.js"
+  ></script>
 
 </body>
 </html>
