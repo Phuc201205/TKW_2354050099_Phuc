@@ -7,6 +7,8 @@ export function initSlider() {
     document.querySelector("[data-slider]");
 
 
+  // Trang hiện tại không có slider
+  // thì thoát luôn, không gây lỗi.
   if (!root) {
     return;
   }
@@ -15,21 +17,26 @@ export function initSlider() {
   const track =
     root.querySelector("[data-slider-track]");
 
+
   const slides =
     Array.from(
       root.querySelectorAll("[data-slide]")
     );
 
+
   const prevButton =
     root.querySelector("[data-slider-prev]");
 
+
   const nextButton =
     root.querySelector("[data-slider-next]");
+
 
   const dotsContainer =
     root.querySelector("[data-slider-dots]");
 
 
+  // Kiểm tra các thành phần bắt buộc.
   if (
     !track ||
     slides.length === 0 ||
@@ -41,7 +48,13 @@ export function initSlider() {
   }
 
 
+
+  // ==================================================
+  // BIẾN TRẠNG THÁI
+  // ==================================================
+
   let index = 0;
+
   let timer = null;
 
   const dots = [];
@@ -76,38 +89,49 @@ export function initSlider() {
   );
 
 
-  slides.forEach((slide, slideIndex) => {
 
-    slide.setAttribute(
-      "role",
-      "group"
-    );
+  // Thiết lập thông tin cho từng slide.
+  slides.forEach(
+    (slide, slideIndex) => {
 
-
-    slide.setAttribute(
-      "aria-roledescription",
-      "slide"
-    );
+      slide.setAttribute(
+        "role",
+        "group"
+      );
 
 
-    slide.setAttribute(
-      "aria-label",
-      `${slideIndex + 1} trên ${slides.length}`
-    );
+      slide.setAttribute(
+        "aria-roledescription",
+        "slide"
+      );
 
-  });
+
+      slide.setAttribute(
+        "aria-label",
+        `${slideIndex + 1} trên ${slides.length}`
+      );
+
+    }
+  );
 
 
 
   // ==================================================
-  // VÙNG THÔNG BÁO CHO TRÌNH ĐỌC MÀN HÌNH
+  // LIVE REGION
   // ==================================================
+  //
+  // Dùng để báo cho trình đọc màn hình
+  // khi NGƯỜI DÙNG chủ động đổi slide.
+  //
+  // Autoplay sẽ không tự đọc liên tục.
 
   const liveRegion =
     document.createElement("p");
 
 
-  liveRegion.className = "sr-only";
+  liveRegion.className =
+    "sr-only";
+
 
   liveRegion.setAttribute(
     "aria-live",
@@ -121,7 +145,9 @@ export function initSlider() {
   );
 
 
-  root.appendChild(liveRegion);
+  root.appendChild(
+    liveRegion
+  );
 
 
 
@@ -129,65 +155,117 @@ export function initSlider() {
   // TẠO DOT TỰ ĐỘNG
   // ==================================================
 
-  slides.forEach((slide, slideIndex) => {
+  slides.forEach(
+    (slide, slideIndex) => {
 
-    const dot =
-      document.createElement("button");
-
-
-    dot.type = "button";
-
-    dot.className =
-      "slider-dot";
+      const dot =
+        document.createElement(
+          "button"
+        );
 
 
-    dot.setAttribute(
-      "aria-label",
-      `Đi đến cảm nhận ${slideIndex + 1}`
-    );
+      dot.type =
+        "button";
 
 
-    dot.addEventListener(
-      "click",
-      () => {
-
-        go(slideIndex);
-
-      }
-    );
+      dot.className =
+        "slider-dot";
 
 
-    dotsContainer.appendChild(dot);
+      dot.setAttribute(
+        "aria-label",
+        `Đi đến cảm nhận ${slideIndex + 1}`
+      );
 
-    dots.push(dot);
-  });
+
+      // Khi người dùng bấm dot
+      // thì cần thông báo cho screen reader.
+      dot.addEventListener(
+        "click",
+        () => {
+
+          go(
+            slideIndex,
+            true
+          );
+
+        }
+      );
+
+
+      dotsContainer.appendChild(
+        dot
+      );
+
+
+      dots.push(
+        dot
+      );
+
+    }
+  );
 
 
 
   // ==================================================
   // CHUYỂN SLIDE
   // ==================================================
+  //
+  // announce = true:
+  // người dùng chủ động đổi slide
+  // → screen reader sẽ được thông báo.
+  //
+  // announce = false:
+  // autoplay hoặc khởi tạo
+  // → không đọc thông báo.
 
-  function go(next) {
+  function go(
+    next,
+    announce = false
+  ) {
 
+    // Công thức giúp slider chạy vòng tròn.
+    //
+    // Ví dụ:
+    // slide 0 bấm lùi:
+    //
+    // (-1 + 3) % 3 = 2
+    //
+    // → chuyển về slide cuối.
     index =
-      (next + slides.length)
-      % slides.length;
+      (
+        next +
+        slides.length
+      ) %
+      slides.length;
 
 
+
+    // Di chuyển cả track sang trái.
     track.style.transform =
       `translateX(-${index * 100}%)`;
 
 
+
+    // ==================================================
+    // CẬP NHẬT TRẠNG THÁI SLIDE
+    // ==================================================
+
     slides.forEach(
-      (slide, slideIndex) => {
+      (
+        slide,
+        slideIndex
+      ) => {
 
         const hidden =
           slideIndex !== index;
 
 
-        // Slide ẩn không được nhận focus
-        // bằng bàn phím.
+        // Slide đang ẩn sẽ có inert.
+        //
+        // Điều này giúp người dùng
+        // bàn phím không Tab vào
+        // nội dung nằm ngoài màn hình.
         slide.toggleAttribute(
           "inert",
           hidden
@@ -203,8 +281,16 @@ export function initSlider() {
     );
 
 
+
+    // ==================================================
+    // CẬP NHẬT DOT
+    // ==================================================
+
     dots.forEach(
-      (dot, dotIndex) => {
+      (
+        dot,
+        dotIndex
+      ) => {
 
         const active =
           dotIndex === index;
@@ -236,10 +322,24 @@ export function initSlider() {
     );
 
 
-    // Báo cho trình đọc màn hình
-    // biết người dùng đang ở slide nào.
-    liveRegion.textContent =
-      `Đang hiển thị cảm nhận ${index + 1} trên ${slides.length}`;
+
+    // ==================================================
+    // THÔNG BÁO CHO SCREEN READER
+    // ==================================================
+    //
+    // Chỉ thông báo nếu người dùng
+    // chủ động điều khiển slider.
+    //
+    // Không thông báo khi autoplay
+    // để tránh screen reader tự đọc
+    // cứ mỗi 5 giây.
+
+    if (announce) {
+
+      liveRegion.textContent =
+        `Đang hiển thị cảm nhận ${index + 1} trên ${slides.length}`;
+
+    }
   }
 
 
@@ -252,7 +352,10 @@ export function initSlider() {
 
     if (timer !== null) {
 
-      clearInterval(timer);
+      clearInterval(
+        timer
+      );
+
 
       timer = null;
 
@@ -268,10 +371,19 @@ export function initSlider() {
 
   function start() {
 
-    // Tránh tạo nhiều setInterval chồng nhau.
+    // Luôn xóa timer cũ
+    // trước khi tạo timer mới.
+    //
+    // Tránh trường hợp nhiều
+    // setInterval chạy chồng lên nhau.
     stop();
 
 
+    // Không autoplay khi:
+    //
+    // - Người dùng muốn giảm chuyển động.
+    // - Slider chỉ có 1 slide.
+    // - Tab trình duyệt đang bị ẩn.
     if (
       reduceMotion ||
       slides.length <= 1 ||
@@ -285,11 +397,15 @@ export function initSlider() {
       setInterval(
         () => {
 
-          go(index + 1);
+          // Autoplay không announce.
+          go(
+            index + 1
+          );
 
         },
         5000
       );
+
   }
 
 
@@ -302,7 +418,10 @@ export function initSlider() {
     "click",
     () => {
 
-      go(index - 1);
+      go(
+        index - 1,
+        true
+      );
 
     }
   );
@@ -317,7 +436,10 @@ export function initSlider() {
     "click",
     () => {
 
-      go(index + 1);
+      go(
+        index + 1,
+        true
+      );
 
     }
   );
@@ -327,46 +449,85 @@ export function initSlider() {
   // ==================================================
   // ĐIỀU KHIỂN BẰNG BÀN PHÍM
   // ==================================================
+  //
+  // ArrowLeft  → slide trước
+  // ArrowRight → slide tiếp
+  // Home       → slide đầu
+  // End        → slide cuối
 
   root.addEventListener(
     "keydown",
     (event) => {
 
-      if (event.key === "ArrowLeft") {
+      if (
+        event.key ===
+        "ArrowLeft"
+      ) {
 
         event.preventDefault();
 
-        go(index - 1);
+
+        go(
+          index - 1,
+          true
+        );
+
 
         return;
       }
 
 
-      if (event.key === "ArrowRight") {
+
+      if (
+        event.key ===
+        "ArrowRight"
+      ) {
 
         event.preventDefault();
 
-        go(index + 1);
+
+        go(
+          index + 1,
+          true
+        );
+
 
         return;
       }
 
 
-      if (event.key === "Home") {
+
+      if (
+        event.key ===
+        "Home"
+      ) {
 
         event.preventDefault();
 
-        go(0);
+
+        go(
+          0,
+          true
+        );
+
 
         return;
       }
 
 
-      if (event.key === "End") {
+
+      if (
+        event.key ===
+        "End"
+      ) {
 
         event.preventDefault();
 
-        go(slides.length - 1);
+
+        go(
+          slides.length - 1,
+          true
+        );
 
       }
 
@@ -376,7 +537,7 @@ export function initSlider() {
 
 
   // ==================================================
-  // DỪNG KHI NGƯỜI DÙNG ĐANG XEM
+  // DỪNG KHI NGƯỜI DÙNG HOVER
   // ==================================================
 
   root.addEventListener(
@@ -391,18 +552,29 @@ export function initSlider() {
   );
 
 
+
+  // ==================================================
+  // DỪNG KHI NGƯỜI DÙNG DÙNG BÀN PHÍM
+  // ==================================================
+  //
+  // focusin:
+  // một phần tử bên trong slider
+  // đang được focus.
+  //
+  // → dừng autoplay.
+
   root.addEventListener(
     "focusin",
     stop
   );
 
 
+
+
   root.addEventListener(
     "focusout",
     (event) => {
 
-      // Chỉ chạy lại khi focus đã rời
-      // khỏi toàn bộ slider.
       if (
         !root.contains(
           event.relatedTarget
@@ -426,7 +598,9 @@ export function initSlider() {
     "visibilitychange",
     () => {
 
-      if (document.hidden) {
+      if (
+        document.hidden
+      ) {
 
         stop();
 
@@ -443,10 +617,15 @@ export function initSlider() {
 
 
   // ==================================================
-  // KHỞI TẠO
+  // KHỞI TẠO SLIDER
   // ==================================================
 
-  go(0);
 
+  go(
+    0
+  );
+
+
+  // Bắt đầu autoplay.
   start();
 }
