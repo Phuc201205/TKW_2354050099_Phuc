@@ -55,6 +55,77 @@ export function initSlider() {
 
 
   // ==================================================
+  // ACCESSIBILITY CHO SLIDER
+  // ==================================================
+
+  root.setAttribute(
+    "role",
+    "region"
+  );
+
+
+  root.setAttribute(
+    "aria-roledescription",
+    "carousel"
+  );
+
+
+  root.setAttribute(
+    "aria-label",
+    "Cảm nhận của khách hàng"
+  );
+
+
+  slides.forEach((slide, slideIndex) => {
+
+    slide.setAttribute(
+      "role",
+      "group"
+    );
+
+
+    slide.setAttribute(
+      "aria-roledescription",
+      "slide"
+    );
+
+
+    slide.setAttribute(
+      "aria-label",
+      `${slideIndex + 1} trên ${slides.length}`
+    );
+
+  });
+
+
+
+  // ==================================================
+  // VÙNG THÔNG BÁO CHO TRÌNH ĐỌC MÀN HÌNH
+  // ==================================================
+
+  const liveRegion =
+    document.createElement("p");
+
+
+  liveRegion.className = "sr-only";
+
+  liveRegion.setAttribute(
+    "aria-live",
+    "polite"
+  );
+
+
+  liveRegion.setAttribute(
+    "aria-atomic",
+    "true"
+  );
+
+
+  root.appendChild(liveRegion);
+
+
+
+  // ==================================================
   // TẠO DOT TỰ ĐỘNG
   // ==================================================
 
@@ -76,9 +147,14 @@ export function initSlider() {
     );
 
 
-    dot.addEventListener("click", () => {
-      go(slideIndex);
-    });
+    dot.addEventListener(
+      "click",
+      () => {
+
+        go(slideIndex);
+
+      }
+    );
 
 
     dotsContainer.appendChild(dot);
@@ -103,64 +179,96 @@ export function initSlider() {
       `translateX(-${index * 100}%)`;
 
 
-    slides.forEach((slide, slideIndex) => {
+    slides.forEach(
+      (slide, slideIndex) => {
 
-      const hidden =
-        slideIndex !== index;
-
-
-      // Slide ẩn không được nhận focus bằng Tab.
-      slide.toggleAttribute(
-        "inert",
-        hidden
-      );
+        const hidden =
+          slideIndex !== index;
 
 
-      slide.setAttribute(
-        "aria-hidden",
-        String(hidden)
-      );
-    });
+        // Slide ẩn không được nhận focus
+        // bằng bàn phím.
+        slide.toggleAttribute(
+          "inert",
+          hidden
+        );
 
 
-    dots.forEach((dot, dotIndex) => {
+        slide.setAttribute(
+          "aria-hidden",
+          String(hidden)
+        );
 
-      const active =
-        dotIndex === index;
-
-
-      dot.classList.toggle(
-        "is-active",
-        active
-      );
+      }
+    );
 
 
-      dot.setAttribute(
-        "aria-current",
-        active ? "true" : "false"
-      );
-    });
+    dots.forEach(
+      (dot, dotIndex) => {
+
+        const active =
+          dotIndex === index;
+
+
+        dot.classList.toggle(
+          "is-active",
+          active
+        );
+
+
+        if (active) {
+
+          dot.setAttribute(
+            "aria-current",
+            "true"
+          );
+
+        }
+        else {
+
+          dot.removeAttribute(
+            "aria-current"
+          );
+
+        }
+
+      }
+    );
+
+
+    // Báo cho trình đọc màn hình
+    // biết người dùng đang ở slide nào.
+    liveRegion.textContent =
+      `Đang hiển thị cảm nhận ${index + 1} trên ${slides.length}`;
   }
 
 
 
   // ==================================================
-  // AUTOPLAY
+  // DỪNG AUTOPLAY
   // ==================================================
 
   function stop() {
 
     if (timer !== null) {
+
       clearInterval(timer);
 
       timer = null;
+
     }
+
   }
 
 
+
+  // ==================================================
+  // BẮT ĐẦU AUTOPLAY
+  // ==================================================
+
   function start() {
 
-    // Luôn clear timer cũ trước.
+    // Tránh tạo nhiều setInterval chồng nhau.
     stop();
 
 
@@ -174,25 +282,96 @@ export function initSlider() {
 
 
     timer =
-      setInterval(() => {
-        go(index + 1);
-      }, 5000);
+      setInterval(
+        () => {
+
+          go(index + 1);
+
+        },
+        5000
+      );
   }
 
 
 
   // ==================================================
-  // BUTTON
+  // NÚT PREVIOUS
   // ==================================================
 
-  prevButton.addEventListener("click", () => {
-    go(index - 1);
-  });
+  prevButton.addEventListener(
+    "click",
+    () => {
+
+      go(index - 1);
+
+    }
+  );
 
 
-  nextButton.addEventListener("click", () => {
-    go(index + 1);
-  });
+
+  // ==================================================
+  // NÚT NEXT
+  // ==================================================
+
+  nextButton.addEventListener(
+    "click",
+    () => {
+
+      go(index + 1);
+
+    }
+  );
+
+
+
+  // ==================================================
+  // ĐIỀU KHIỂN BẰNG BÀN PHÍM
+  // ==================================================
+
+  root.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (event.key === "ArrowLeft") {
+
+        event.preventDefault();
+
+        go(index - 1);
+
+        return;
+      }
+
+
+      if (event.key === "ArrowRight") {
+
+        event.preventDefault();
+
+        go(index + 1);
+
+        return;
+      }
+
+
+      if (event.key === "Home") {
+
+        event.preventDefault();
+
+        go(0);
+
+        return;
+      }
+
+
+      if (event.key === "End") {
+
+        event.preventDefault();
+
+        go(slides.length - 1);
+
+      }
+
+    }
+  );
 
 
 
@@ -222,14 +401,16 @@ export function initSlider() {
     "focusout",
     (event) => {
 
-      // Chỉ chạy lại khi focus
-      // đã rời khỏi toàn bộ slider.
+      // Chỉ chạy lại khi focus đã rời
+      // khỏi toàn bộ slider.
       if (
         !root.contains(
           event.relatedTarget
         )
       ) {
+
         start();
+
       }
 
     }
@@ -238,7 +419,7 @@ export function initSlider() {
 
 
   // ==================================================
-  // TAB BROWSER BỊ ẨN
+  // TAB TRÌNH DUYỆT BỊ ẨN
   // ==================================================
 
   document.addEventListener(
@@ -246,10 +427,14 @@ export function initSlider() {
     () => {
 
       if (document.hidden) {
+
         stop();
+
       }
       else {
+
         start();
+
       }
 
     }
