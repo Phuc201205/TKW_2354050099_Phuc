@@ -40,13 +40,19 @@ export function initPricing() {
     }
 
 
+    const knob =
+      toggle.firstElementChild;
+
+
     function updatePrices(yearly) {
 
+      // Đổi giá
       prices.forEach((price) => {
 
-        const value = yearly
-          ? price.dataset.yearly
-          : price.dataset.monthly;
+        const value =
+          yearly
+            ? price.dataset.yearly
+            : price.dataset.monthly;
 
 
         if (value === undefined) {
@@ -59,6 +65,7 @@ export function initPricing() {
       });
 
 
+      // Cập nhật trạng thái ARIA
       toggle.setAttribute(
         "aria-checked",
         String(yearly)
@@ -73,7 +80,18 @@ export function initPricing() {
       );
 
 
+      // Di chuyển núm công tắc
+      if (knob) {
+        knob.classList.toggle(
+          "translate-x-7",
+          yearly
+        );
+      }
+
+
+      // Label tháng
       if (monthLabel) {
+
         monthLabel.classList.toggle(
           "text-accent-500",
           !yearly
@@ -86,7 +104,9 @@ export function initPricing() {
       }
 
 
+      // Label năm
       if (yearLabel) {
+
         yearLabel.classList.toggle(
           "text-accent-500",
           yearly
@@ -99,28 +119,40 @@ export function initPricing() {
       }
 
 
+      // Đổi hậu tố
       const suffixes =
-        root.querySelectorAll("[data-price-suffix]");
+        root.querySelectorAll(
+          "[data-price-suffix]"
+        );
 
 
       suffixes.forEach((suffix) => {
+
         suffix.textContent =
-          yearly ? "/ năm" : "/ tháng";
+          yearly
+            ? "/ năm"
+            : "/ tháng";
+
       });
     }
 
 
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener(
+      "click",
+      () => {
 
-      const yearly =
-        toggle.getAttribute("aria-checked")
-          !== "true";
+        const yearly =
+          toggle.getAttribute(
+            "aria-checked"
+          ) !== "true";
 
 
-      updatePrices(yearly);
-    });
+        updatePrices(yearly);
+      }
+    );
 
 
+    // Ban đầu là giá tháng
     updatePrices(false);
   });
 }

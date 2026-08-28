@@ -1,57 +1,55 @@
 # TKW_2354050099_Phuc
 
-## Bài thực hành Thiết kế Web
+## Thực hành Thiết kế Web
 
-### Sản phẩm
+### Sinh viên thực hiện
 
-**HPTime - SaaS chấm công thông minh**
+**Họ tên:** Lê Hữu Phúc
 
-HPTime là nền tảng SaaS hỗ trợ doanh nghiệp quản lý chấm công, thời gian làm việc, ca làm và thông tin nhân viên trên một hệ thống thống nhất.
-
----
-
-# Buổi 1 - Design Token và giao diện cơ bản
-
-## Design Token
-
-| Vai trò | Giá trị | Token | Tailwind |
-|---|---|---|---|
-| Màu thương hiệu rất nhạt | #f5faff | --color-brand-50 | bg-brand-50 |
-| Màu thương hiệu nhạt | #edf6fc | --color-brand-100 | bg-brand-100 |
-| Màu thương hiệu phụ | #dcecf9 | --color-brand-200 | bg-brand-200 |
-| Màu thương hiệu chính | #c4dff6 | --color-brand-600 | bg-brand-600 |
-| Màu thương hiệu đậm | #8fc2e8 | --color-brand-700 | bg-brand-700 |
-| Màu nhấn | #4f8fbd | --color-accent-500 | text-accent-500 |
-| Chữ chính | #111827 | --color-ink | text-ink |
-| Chữ phụ | #6b7280 | --color-muted | text-muted |
-| Nền trang | #ffffff | --color-surface | bg-surface |
-| Nền phụ | #f8fafc | --color-surface-soft | bg-surface-soft |
-| Viền | #e5e7eb | --color-line | border-line |
-| Phông tiêu đề | Inter | --font-display | font-display |
-| Phông nội dung | Inter | --font-body | font-body |
-| Bo góc thẻ | 0.5rem | --radius-card | rounded-card |
+**Sản phẩm:** HPTime - SaaS chấm công thông minh
 
 ---
 
-# Buổi 2 - Flexbox và Grid
+# Giới thiệu
 
-Trang chủ được hoàn thiện bằng Flexbox và Grid.
+HPTime là nền tảng SaaS hỗ trợ doanh nghiệp quản lý chấm công, ca làm, thời gian làm việc và thông tin nhân viên trên một hệ thống thống nhất.
 
-Các khu vực chính gồm:
+Website được xây dựng bằng:
 
-- Navbar
-- Hero
-- Customer Logos
-- Features
-- Statistics
-- Testimonial
-- Pricing
-- FAQ
-- Cách hoạt động
-- CTA
-- Footer
+- HTML5
+- Tailwind CSS v4
+- JavaScript ES Modules
+- GitHub Pages
 
-Layout sử dụng container thống nhất:
+Không sử dụng thư viện JavaScript bên ngoài cho các tính năng tương tác.
 
-```html
-mx-auto w-full max-w-6xl px-5
+---
+
+# Cấu trúc project
+
+```text
+TKW_2354050099_Phuc/
+│
+├── index.html
+├── pricing.html
+├── contact.html
+│
+├── src/
+│   └── input.css
+│
+├── dist/
+│   └── output.css
+│
+├── js/
+│   ├── main.js
+│   ├── nav.js
+│   ├── theme.js
+│   ├── faq.js
+│   ├── pricing.js
+│   ├── slider.js
+│   ├── reveal.js
+│   └── extra.js
+│
+├── package.json
+├── package-lock.json
+└── README.md
