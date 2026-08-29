@@ -2,6 +2,7 @@
 <html lang="vi">
 
 <head>
+
   <meta charset="UTF-8" />
 
   <meta
@@ -9,40 +10,68 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Liên hệ - HPTime</title>
+  <title>
+    Liên hệ - HPTime
+  </title>
 
-  <!-- Không để trình duyệt tự tìm favicon.ico -->
-  <link rel="icon" href="data:," />
 
-  <!-- DARK MODE TRƯỚC KHI TRÌNH DUYỆT VẼ TRANG -->
+  <link
+    rel="icon"
+    href="data:,"
+  />
+
+
+  <!-- ==================================================
+       DARK MODE TRƯỚC KHI VẼ TRANG
+  =================================================== -->
+
   <script>
+
     (function () {
+
       let saved = null;
 
+
       try {
-        saved = localStorage.getItem("theme");
+
+        saved =
+          localStorage.getItem(
+            "theme"
+          );
+
       }
       catch {
+
         saved = null;
+
       }
 
-      const dark = saved
-        ? saved === "dark"
-        : window.matchMedia(
-            "(prefers-color-scheme: dark)"
-          ).matches;
 
-      document.documentElement.classList.toggle(
-        "dark",
-        dark
-      );
+      const dark =
+        saved
+          ? saved === "dark"
+          : window.matchMedia(
+              "(prefers-color-scheme: dark)"
+            ).matches;
+
+
+      document.documentElement
+        .classList
+        .toggle(
+          "dark",
+          dark
+        );
+
     })();
+
   </script>
+
 
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
   />
+
 
   <link
     rel="preconnect"
@@ -50,30 +79,50 @@
     crossorigin
   />
 
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
+
   <link
     rel="stylesheet"
     href="./dist/output.css"
   />
+
 </head>
 
-<body class="bg-surface font-body text-ink">
+
+<body
+  class="
+    bg-surface
+    font-body
+    text-ink
+  "
+>
+
 
   <div
     id="nav-sentinel"
     aria-hidden="true"
   ></div>
 
+
   <a
     href="#main"
-    class="sr-only focus:not-sr-only"
+    class="
+      sr-only
+      focus:not-sr-only
+    "
   >
     Bỏ qua đến nội dung chính
   </a>
+
+
+  <!-- ==================================================
+       HEADER
+  =================================================== -->
 
   <header
     data-site-header
@@ -89,7 +138,11 @@
     "
   >
 
-    <nav aria-label="Điều hướng chính">
+
+    <nav
+      aria-label="Điều hướng chính"
+    >
+
 
       <div
         class="
@@ -107,10 +160,17 @@
         "
       >
 
+
         <a
           href="./index.html"
-          class="flex shrink-0 items-center gap-3"
+          class="
+            flex
+            shrink-0
+            items-center
+            gap-3
+          "
         >
+
 
           <span
             class="
@@ -127,6 +187,7 @@
             HP
           </span>
 
+
           <span
             class="
               text-xl
@@ -138,7 +199,9 @@
             HPTime
           </span>
 
+
         </a>
+
 
         <ul
           class="
@@ -150,35 +213,73 @@
           "
         >
 
+
           <li>
+
             <a
               href="./index.html#features"
-              class="font-medium text-ink hover:text-accent-500"
+              class="
+                font-medium
+                text-ink
+                hover:text-accent-500
+              "
             >
               Tính năng
             </a>
+
           </li>
 
+
           <li>
+
             <a
               href="./pricing.html"
-              class="font-medium text-ink hover:text-accent-500"
+              class="
+                font-medium
+                text-ink
+                hover:text-accent-500
+              "
             >
               Bảng giá
             </a>
+
           </li>
 
+
           <li>
+
+            <a
+              href="./attendance.html"
+              class="
+                font-medium
+                text-ink
+                hover:text-accent-500
+              "
+            >
+              Chấm công
+            </a>
+
+          </li>
+
+
+          <li>
+
             <a
               href="./contact.html"
               aria-current="page"
-              class="font-semibold text-accent-500"
+              class="
+                font-semibold
+                text-accent-500
+              "
             >
               Liên hệ
             </a>
+
           </li>
 
+
         </ul>
+
 
         <div
           class="
@@ -189,6 +290,7 @@
             sm:gap-3
           "
         >
+
 
           <button
             data-theme-toggle
@@ -214,20 +316,29 @@
               focus-visible:outline-accent-500
             "
           >
+
             <span
               data-theme-icon
               aria-hidden="true"
             >
               ☾
             </span>
+
           </button>
+
 
           <a
             href="./pricing.html"
-            class="btn btn-ghost hidden sm:inline-flex"
+            class="
+              btn
+              btn-ghost
+              hidden
+              sm:inline-flex
+            "
           >
             Xem bảng giá
           </a>
+
 
           <button
             data-nav-toggle
@@ -254,11 +365,19 @@
             ☰
           </button>
 
+
         </div>
+
 
       </div>
 
+
     </nav>
+
+
+    <!-- ==================================================
+         MOBILE MENU
+    =================================================== -->
 
     <nav
       id="mobile-menu"
@@ -273,6 +392,7 @@
       "
     >
 
+
       <ul
         class="
           mx-auto
@@ -286,9 +406,11 @@
         "
       >
 
+
         <li>
+
           <a
-            href="./index.html#features"
+            href="./index.html"
             class="
               block
               rounded-lg
@@ -299,11 +421,14 @@
               hover:bg-surface-soft
             "
           >
-            Tính năng
+            Trang chủ
           </a>
+
         </li>
 
+
         <li>
+
           <a
             href="./pricing.html"
             class="
@@ -318,9 +443,32 @@
           >
             Bảng giá
           </a>
+
         </li>
 
+
         <li>
+
+          <a
+            href="./attendance.html"
+            class="
+              block
+              rounded-lg
+              px-4
+              py-3
+              font-medium
+              text-ink
+              hover:bg-surface-soft
+            "
+          >
+            Chấm công
+          </a>
+
+        </li>
+
+
+        <li>
+
           <a
             href="./contact.html"
             aria-current="page"
@@ -336,21 +484,41 @@
           >
             Liên hệ
           </a>
+
         </li>
+
 
       </ul>
 
+
     </nav>
+
 
   </header>
 
-  <main id="main">
+
+  <!-- ==================================================
+       MAIN
+  =================================================== -->
+
+  <main
+    id="main"
+  >
+
+
+    <!-- ==================================================
+         HERO
+    =================================================== -->
 
     <section
       data-reveal
-      class="section bg-surface"
+      class="
+        section
+        bg-surface
+      "
       aria-labelledby="contact-title"
     >
+
 
       <div
         class="
@@ -365,9 +533,13 @@
         "
       >
 
-        <p class="eyebrow">
+
+        <p
+          class="eyebrow"
+        >
           Liên hệ
         </p>
+
 
         <h1
           id="contact-title"
@@ -383,6 +555,7 @@
           Trao đổi với đội ngũ HPTime
         </h1>
 
+
         <p
           class="
             text-base
@@ -396,15 +569,26 @@
           Đội ngũ HPTime sẽ hỗ trợ bạn tìm giải pháp phù hợp.
         </p>
 
+
       </div>
+
 
     </section>
 
+
+    <!-- ==================================================
+         CONTACT
+    =================================================== -->
+
     <section
       data-reveal
-      class="section bg-surface-soft"
+      class="
+        section
+        bg-surface-soft
+      "
       aria-labelledby="form-title"
     >
+
 
       <div
         class="
@@ -419,13 +603,35 @@
         "
       >
 
-        <div class="flex flex-col gap-8">
 
-          <div class="flex flex-col gap-4">
+        <!-- ==================================================
+             CONTACT INFORMATION
+        =================================================== -->
 
-            <p class="eyebrow">
+        <div
+          class="
+            flex
+            flex-col
+            gap-8
+          "
+        >
+
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-4
+            "
+          >
+
+
+            <p
+              class="eyebrow"
+            >
               Thông tin
             </p>
+
 
             <h2
               id="form-title"
@@ -440,12 +646,21 @@
               Chúng tôi có thể giúp gì cho bạn?
             </h2>
 
-            <p class="leading-7 text-muted">
-              Gửi biểu mẫu hoặc liên hệ trực tiếp nếu bạn
-              muốn trao đổi về bảng giá, triển khai hay tính năng.
+
+            <p
+              class="
+                leading-7
+                text-muted
+              "
+            >
+              Gửi biểu mẫu hoặc liên hệ trực tiếp
+              nếu bạn muốn trao đổi về bảng giá,
+              triển khai hay tính năng của HPTime.
             </p>
 
+
           </div>
+
 
           <address
             class="
@@ -455,6 +670,9 @@
               not-italic
             "
           >
+
+
+            <!-- EMAIL -->
 
             <div
               data-copy-root
@@ -466,9 +684,16 @@
               "
             >
 
-              <p class="font-semibold text-ink">
+
+              <p
+                class="
+                  font-semibold
+                  text-ink
+                "
+              >
                 Email
               </p>
+
 
               <a
                 href="mailto:support@hptime.vn"
@@ -481,6 +706,7 @@
                 support@hptime.vn
               </a>
 
+
               <div
                 class="
                   flex
@@ -490,25 +716,38 @@
                 "
               >
 
+
                 <button
                   data-copy-email
                   data-copy-value="support@hptime.vn"
                   type="button"
-                  class="btn btn-ghost"
+                  class="
+                    btn
+                    btn-ghost
+                  "
                 >
                   Sao chép email
                 </button>
+
 
                 <p
                   data-copy-status
                   role="status"
                   aria-live="polite"
-                  class="text-sm text-muted"
+                  class="
+                    text-sm
+                    text-muted
+                  "
                 ></p>
+
 
               </div>
 
+
             </div>
+
+
+            <!-- PHONE -->
 
             <div
               class="
@@ -519,9 +758,16 @@
               "
             >
 
-              <p class="font-semibold text-ink">
+
+              <p
+                class="
+                  font-semibold
+                  text-ink
+                "
+              >
                 Điện thoại
               </p>
+
 
               <a
                 href="tel:+842812345678"
@@ -533,7 +779,11 @@
                 (028) 1234 5678
               </a>
 
+
             </div>
+
+
+            <!-- OFFICE -->
 
             <div
               class="
@@ -544,21 +794,39 @@
               "
             >
 
-              <p class="font-semibold text-ink">
+
+              <p
+                class="
+                  font-semibold
+                  text-ink
+                "
+              >
                 Văn phòng
               </p>
 
-              <p class="text-muted">
+
+              <p
+                class="text-muted"
+              >
                 TP. Hồ Chí Minh, Việt Nam
               </p>
 
+
             </div>
+
 
           </address>
 
+
         </div>
 
+
+        <!-- ==================================================
+             FORM
+        =================================================== -->
+
         <form
+          data-contact-form
           action="#"
           method="post"
           class="
@@ -570,7 +838,39 @@
           "
         >
 
-          <div class="flex flex-col gap-2">
+
+          <!-- ERROR SUMMARY -->
+
+          <p
+            data-form-summary
+            role="alert"
+            tabindex="-1"
+            hidden
+            class="
+              rounded-lg
+              border
+              border-red-500
+              bg-surface-soft
+              p-4
+              text-sm
+              font-medium
+              text-red-600
+            "
+          ></p>
+
+
+          <!-- ==================================================
+               FULL NAME
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
 
             <label
               for="ho-ten"
@@ -584,7 +884,9 @@
               >
                 *
               </span>
+
             </label>
+
 
             <input
               id="ho-ten"
@@ -592,20 +894,54 @@
               type="text"
               class="field-input"
               required
+              minlength="2"
+              maxlength="80"
               autocomplete="name"
-              aria-describedby="ho-ten-hint"
+              data-validate
+              data-error-id="ho-ten-error"
+              aria-describedby="
+                ho-ten-hint
+                ho-ten-error
+              "
             />
+
 
             <p
               id="ho-ten-hint"
-              class="text-xs text-muted"
+              class="
+                text-xs
+                text-muted
+              "
             >
               Nhập họ tên của người liên hệ chính.
             </p>
 
+
+            <p
+              id="ho-ten-error"
+              role="alert"
+              class="
+                text-sm
+                text-red-600
+              "
+            ></p>
+
+
           </div>
 
-          <div class="flex flex-col gap-2">
+
+          <!-- ==================================================
+               PHONE
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
 
             <label
               for="dien-thoai"
@@ -619,7 +955,9 @@
               >
                 *
               </span>
+
             </label>
+
 
             <input
               id="dien-thoai"
@@ -630,25 +968,51 @@
               pattern="0[0-9]{9}"
               autocomplete="tel"
               inputmode="numeric"
-              aria-describedby="dien-thoai-hint dien-thoai-error"
+              data-validate
+              data-error-id="dien-thoai-error"
+              aria-describedby="
+                dien-thoai-hint
+                dien-thoai-error
+              "
             />
+
 
             <p
               id="dien-thoai-hint"
-              class="text-xs text-muted"
+              class="
+                text-xs
+                text-muted
+              "
             >
               Ví dụ: 0901234567.
             </p>
 
+
             <p
               id="dien-thoai-error"
-              class="text-sm text-red-600"
               role="alert"
+              class="
+                text-sm
+                text-red-600
+              "
             ></p>
+
 
           </div>
 
-          <div class="flex flex-col gap-2">
+
+          <!-- ==================================================
+               EMAIL
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
 
             <label
               for="email"
@@ -662,7 +1026,9 @@
               >
                 *
               </span>
+
             </label>
+
 
             <input
               id="email"
@@ -671,19 +1037,51 @@
               class="field-input"
               required
               autocomplete="email"
-              aria-describedby="email-hint"
+              data-validate
+              data-error-id="email-error"
+              aria-describedby="
+                email-hint
+                email-error
+              "
             />
+
 
             <p
               id="email-hint"
-              class="text-xs text-muted"
+              class="
+                text-xs
+                text-muted
+              "
             >
               Chúng tôi sẽ gửi phản hồi qua địa chỉ này.
             </p>
 
+
+            <p
+              id="email-error"
+              role="alert"
+              class="
+                text-sm
+                text-red-600
+              "
+            ></p>
+
+
           </div>
 
-          <div class="flex flex-col gap-2">
+
+          <!-- ==================================================
+               COMPANY
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
 
             <label
               for="doanh-nghiep"
@@ -692,17 +1090,32 @@
               Tên doanh nghiệp
             </label>
 
+
             <input
               id="doanh-nghiep"
               name="doanhNghiep"
               type="text"
               class="field-input"
+              maxlength="100"
               autocomplete="organization"
             />
 
+
           </div>
 
-          <div class="flex flex-col gap-2">
+
+          <!-- ==================================================
+               COMPANY SIZE
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
 
             <label
               for="quy-mo"
@@ -716,44 +1129,79 @@
               >
                 *
               </span>
+
             </label>
+
 
             <select
               id="quy-mo"
               name="quyMo"
               class="field-input"
               required
+              data-validate
+              data-error-id="quy-mo-error"
+              aria-describedby="quy-mo-error"
             >
+
 
               <option value="">
                 Chọn quy mô doanh nghiệp
               </option>
 
+
               <option value="1-10">
                 1 - 10 nhân viên
               </option>
+
 
               <option value="11-50">
                 11 - 50 nhân viên
               </option>
 
+
               <option value="51-100">
                 51 - 100 nhân viên
               </option>
+
 
               <option value="101-500">
                 101 - 500 nhân viên
               </option>
 
+
               <option value="500+">
                 Trên 500 nhân viên
               </option>
 
+
             </select>
+
+
+            <p
+              id="quy-mo-error"
+              role="alert"
+              class="
+                text-sm
+                text-red-600
+              "
+            ></p>
+
 
           </div>
 
-          <div class="flex flex-col gap-2">
+
+          <!-- ==================================================
+               MESSAGE
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
 
             <label
               for="noi-dung"
@@ -767,7 +1215,9 @@
               >
                 *
               </span>
+
             </label>
+
 
             <textarea
               id="noi-dung"
@@ -778,51 +1228,119 @@
                 resize-y
               "
               required
+              minlength="20"
+              maxlength="500"
               rows="6"
-              aria-describedby="noi-dung-hint"
+              data-validate
+              data-error-id="noi-dung-error"
+              aria-describedby="
+                noi-dung-hint
+                noi-dung-error
+              "
             ></textarea>
+
 
             <p
               id="noi-dung-hint"
-              class="text-xs text-muted"
-            >
-              Mô tả nhu cầu chấm công hoặc vấn đề bạn đang gặp.
-            </p>
-
-          </div>
-
-          <div class="flex items-start gap-3">
-
-            <input
-              id="dong-y"
-              name="dongY"
-              type="checkbox"
-              required
               class="
-                mt-1
-                h-5
-                w-5
-                shrink-0
-                accent-accent-500
-                focus-visible:outline-2
-                focus-visible:outline-offset-2
-                focus-visible:outline-accent-500
-              "
-            />
-
-            <label
-              for="dong-y"
-              class="
-                text-sm
-                leading-6
+                text-xs
                 text-muted
               "
             >
-              Tôi đồng ý để HPTime sử dụng thông tin trên
-              nhằm liên hệ và hỗ trợ yêu cầu của tôi.
-            </label>
+              Mô tả nhu cầu chấm công hoặc vấn đề
+              bạn đang gặp. Tối thiểu 20 ký tự.
+            </p>
+
+
+            <p
+              id="noi-dung-error"
+              role="alert"
+              class="
+                text-sm
+                text-red-600
+              "
+            ></p>
+
 
           </div>
+
+
+          <!-- ==================================================
+               AGREEMENT
+          =================================================== -->
+
+          <div
+            class="
+              flex
+              flex-col
+              gap-2
+            "
+          >
+
+
+            <div
+              class="
+                flex
+                items-start
+                gap-3
+              "
+            >
+
+
+              <input
+                id="dong-y"
+                name="dongY"
+                type="checkbox"
+                required
+                data-validate
+                data-error-id="dong-y-error"
+                aria-describedby="dong-y-error"
+                class="
+                  mt-1
+                  h-5
+                  w-5
+                  shrink-0
+                  accent-accent-500
+                  focus-visible:outline-2
+                  focus-visible:outline-offset-2
+                  focus-visible:outline-accent-500
+                "
+              />
+
+
+              <label
+                for="dong-y"
+                class="
+                  text-sm
+                  leading-6
+                  text-muted
+                "
+              >
+                Tôi đồng ý để HPTime sử dụng
+                thông tin trên nhằm liên hệ
+                và hỗ trợ yêu cầu của tôi.
+              </label>
+
+
+            </div>
+
+
+            <p
+              id="dong-y-error"
+              role="alert"
+              class="
+                text-sm
+                text-red-600
+              "
+            ></p>
+
+
+          </div>
+
+
+          <!-- ==================================================
+               SUBMIT
+          =================================================== -->
 
           <button
             type="submit"
@@ -837,17 +1355,29 @@
             Gửi yêu cầu
           </button>
 
+
         </form>
+
 
       </div>
 
+
     </section>
+
+
+    <!-- ==================================================
+         AFTER SUBMIT
+    =================================================== -->
 
     <section
       data-reveal
-      class="section bg-surface"
+      class="
+        section
+        bg-surface
+      "
       aria-labelledby="after-submit-title"
     >
+
 
       <div
         class="
@@ -861,11 +1391,18 @@
         "
       >
 
-        <div class="section-heading">
 
-          <p class="eyebrow">
+        <div
+          class="section-heading"
+        >
+
+
+          <p
+            class="eyebrow"
+          >
             Sau khi gửi
           </p>
+
 
           <h2
             id="after-submit-title"
@@ -880,68 +1417,175 @@
             Điều gì sẽ xảy ra tiếp theo?
           </h2>
 
+
         </div>
 
-        <ol class="grid gap-6 lg:grid-cols-3">
 
-          <li class="card flex flex-col gap-4">
+        <ol
+          class="
+            grid
+            gap-6
+            lg:grid-cols-3
+          "
+        >
 
-            <span class="text-3xl font-extrabold text-accent-500">
+
+          <li
+            class="
+              card
+              flex
+              flex-col
+              gap-4
+            "
+          >
+
+
+            <span
+              class="
+                text-3xl
+                font-extrabold
+                text-accent-500
+              "
+            >
               01
             </span>
 
-            <h3 class="text-xl font-bold text-ink">
+
+            <h3
+              class="
+                text-xl
+                font-bold
+                text-ink
+              "
+            >
               Tiếp nhận thông tin
             </h3>
 
-            <p class="leading-7 text-muted">
-              HPTime nhận thông tin và xác định nhu cầu chính
-              mà doanh nghiệp đang cần hỗ trợ.
+
+            <p
+              class="
+                leading-7
+                text-muted
+              "
+            >
+              HPTime tiếp nhận yêu cầu
+              và xác định nhu cầu chính
+              mà doanh nghiệp đang cần.
             </p>
+
 
           </li>
 
-          <li class="card flex flex-col gap-4">
 
-            <span class="text-3xl font-extrabold text-accent-500">
+          <li
+            class="
+              card
+              flex
+              flex-col
+              gap-4
+            "
+          >
+
+
+            <span
+              class="
+                text-3xl
+                font-extrabold
+                text-accent-500
+              "
+            >
               02
             </span>
 
-            <h3 class="text-xl font-bold text-ink">
+
+            <h3
+              class="
+                text-xl
+                font-bold
+                text-ink
+              "
+            >
               Trao đổi nhu cầu
             </h3>
 
-            <p class="leading-7 text-muted">
-              Đội ngũ hỗ trợ liên hệ để làm rõ quy mô
-              và yêu cầu triển khai.
+
+            <p
+              class="
+                leading-7
+                text-muted
+              "
+            >
+              Đội ngũ hỗ trợ liên hệ
+              để làm rõ quy mô và
+              yêu cầu triển khai.
             </p>
+
 
           </li>
 
-          <li class="card flex flex-col gap-4">
 
-            <span class="text-3xl font-extrabold text-accent-500">
+          <li
+            class="
+              card
+              flex
+              flex-col
+              gap-4
+            "
+          >
+
+
+            <span
+              class="
+                text-3xl
+                font-extrabold
+                text-accent-500
+              "
+            >
               03
             </span>
 
-            <h3 class="text-xl font-bold text-ink">
+
+            <h3
+              class="
+                text-xl
+                font-bold
+                text-ink
+              "
+            >
               Đề xuất giải pháp
             </h3>
 
-            <p class="leading-7 text-muted">
-              Doanh nghiệp nhận được gói sử dụng
-              và hướng triển khai phù hợp.
+
+            <p
+              class="
+                leading-7
+                text-muted
+              "
+            >
+              Doanh nghiệp nhận được
+              gói sử dụng và hướng triển khai
+              phù hợp với nhu cầu.
             </p>
+
 
           </li>
 
+
         </ol>
+
 
       </div>
 
+
     </section>
 
+
   </main>
+
+
+  <!-- ==================================================
+       FOOTER
+  =================================================== -->
 
   <footer
     class="
@@ -950,6 +1594,7 @@
       sm:py-20
     "
   >
+
 
     <div
       class="
@@ -965,12 +1610,25 @@
       "
     >
 
-      <div class="flex flex-col gap-4">
+
+      <div
+        class="
+          flex
+          flex-col
+          gap-4
+        "
+      >
+
 
         <a
           href="./index.html"
-          class="flex items-center gap-3"
+          class="
+            flex
+            items-center
+            gap-3
+          "
         >
+
 
           <span
             class="
@@ -987,91 +1645,192 @@
             HP
           </span>
 
-          <span class="text-2xl font-semibold text-ink">
+
+          <span
+            class="
+              text-2xl
+              font-semibold
+              text-ink
+            "
+          >
             HPTime
           </span>
 
+
         </a>
 
-        <p class="leading-7 text-muted">
-          Chấm công thông minh cho doanh nghiệp.
+
+        <p
+          class="
+            leading-7
+            text-muted
+          "
+        >
+          Chấm công thông minh
+          cho doanh nghiệp.
         </p>
+
 
       </div>
 
-      <nav aria-labelledby="footer-product">
 
-        <div class="flex flex-col gap-4">
+      <nav
+        aria-labelledby="footer-product"
+      >
+
+
+        <div
+          class="
+            flex
+            flex-col
+            gap-4
+          "
+        >
+
 
           <h2
             id="footer-product"
-            class="font-semibold text-ink"
+            class="
+              font-semibold
+              text-ink
+            "
           >
             Sản phẩm
           </h2>
 
-          <ul class="flex flex-col gap-3 text-muted">
+
+          <ul
+            class="
+              flex
+              flex-col
+              gap-3
+              text-muted
+            "
+          >
+
 
             <li>
+
               <a
                 href="./index.html#features"
-                class="hover:text-accent-500"
+                class="
+                  hover:text-accent-500
+                "
               >
                 Tính năng
               </a>
+
             </li>
 
+
             <li>
+
+              <a
+                href="./attendance.html"
+                class="
+                  hover:text-accent-500
+                "
+              >
+                Chấm công
+              </a>
+
+            </li>
+
+
+            <li>
+
               <a
                 href="./pricing.html"
-                class="hover:text-accent-500"
+                class="
+                  hover:text-accent-500
+                "
               >
                 Bảng giá
               </a>
+
             </li>
+
 
           </ul>
 
+
         </div>
+
 
       </nav>
 
-      <nav aria-labelledby="footer-support">
 
-        <div class="flex flex-col gap-4">
+      <nav
+        aria-labelledby="footer-support"
+      >
+
+
+        <div
+          class="
+            flex
+            flex-col
+            gap-4
+          "
+        >
+
 
           <h2
             id="footer-support"
-            class="font-semibold text-ink"
+            class="
+              font-semibold
+              text-ink
+            "
           >
             Hỗ trợ
           </h2>
 
-          <ul class="flex flex-col gap-3 text-muted">
+
+          <ul
+            class="
+              flex
+              flex-col
+              gap-3
+              text-muted
+            "
+          >
+
 
             <li>
+
               <a
                 href="./contact.html"
-                class="hover:text-accent-500"
+                class="
+                  hover:text-accent-500
+                "
               >
                 Liên hệ
               </a>
+
             </li>
 
+
             <li>
+
               <a
                 href="./index.html#faq"
-                class="hover:text-accent-500"
+                class="
+                  hover:text-accent-500
+                "
               >
                 FAQ
               </a>
+
             </li>
+
 
           </ul>
 
+
         </div>
 
+
       </nav>
+
 
       <address
         class="
@@ -1083,33 +1842,86 @@
         "
       >
 
-        <p class="font-semibold text-ink">
+
+        <p
+          class="
+            font-semibold
+            text-ink
+          "
+        >
           Liên hệ
         </p>
+
 
         <p>
           TP. Hồ Chí Minh, Việt Nam
         </p>
 
+
         <a
           href="mailto:support@hptime.vn"
-          class="break-all hover:text-accent-500"
+          class="
+            break-all
+            hover:text-accent-500
+          "
         >
           support@hptime.vn
         </a>
 
+
         <a
           href="tel:+842812345678"
-          class="hover:text-accent-500"
+          class="
+            hover:text-accent-500
+          "
         >
           (028) 1234 5678
         </a>
 
+
       </address>
+
 
     </div>
 
+
   </footer>
+
+
+  <!-- ==================================================
+       SUCCESS TOAST
+  =================================================== -->
+
+  <div
+    data-form-toast
+    role="status"
+    aria-live="polite"
+    hidden
+    class="
+      fixed
+      bottom-5
+      left-1/2
+      z-[70]
+      w-[calc(100%-2rem)]
+      max-w-md
+      -translate-x-1/2
+      rounded-lg
+      border
+      border-line
+      bg-surface
+      px-5
+      py-4
+      text-center
+      font-semibold
+      text-ink
+      shadow-lg
+    "
+  ></div>
+
+
+  <!-- ==================================================
+       TO TOP
+  =================================================== -->
 
   <button
     data-to-top
@@ -1138,10 +1950,13 @@
     ↑
   </button>
 
+
   <script
     type="module"
     src="./js/main.js"
   ></script>
 
+
 </body>
+
 </html>

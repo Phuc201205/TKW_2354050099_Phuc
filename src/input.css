@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
+
 @custom-variant dark (&:where(.dark, .dark *));
+
 
 
 /* ==================================================
@@ -10,6 +12,7 @@
 @theme {
 
   /* BRAND - LIGHT */
+
   --color-brand-50: #f5faff;
   --color-brand-100: #edf6fc;
   --color-brand-200: #dcecf9;
@@ -21,17 +24,20 @@
 
 
   /* TEXT - LIGHT */
+
   --color-ink: #111827;
   --color-muted: #6b7280;
 
 
   /* SURFACE - LIGHT */
+
   --color-surface: #ffffff;
   --color-surface-soft: #f8fafc;
   --color-line: #e5e7eb;
 
 
   /* DARK PAIRS */
+
   --color-ink-invert: #e8f1f7;
   --color-muted-invert: #a9bac5;
 
@@ -49,16 +55,32 @@
 
   --color-accent-500-dark: #80b9dc;
 
-  --color-on-accent: #f5faff;
+
+  /*
+    Dùng chữ tối trên nền accent để
+    đạt tương phản tốt hơn.
+  */
+
+  --color-on-accent: #0e1b24;
 
 
   /* FONT */
-  --font-display: "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+
+  --font-display:
+    "Inter",
+    system-ui,
+    sans-serif;
+
+  --font-body:
+    "Inter",
+    system-ui,
+    sans-serif;
 
 
   /* RADIUS */
+
   --radius-card: 0.5rem;
+
 }
 
 
@@ -69,30 +91,73 @@
 
 .dark {
 
-  --color-ink: var(--color-ink-invert);
-  --color-muted: var(--color-muted-invert);
+  --color-ink:
+    var(
+      --color-ink-invert
+    );
 
-  --color-line: var(--color-line-invert);
+  --color-muted:
+    var(
+      --color-muted-invert
+    );
 
-  --color-surface: var(--color-surface-dark);
-  --color-surface-soft: var(--color-surface-dark-alt);
 
-  --color-brand-50: var(--color-brand-50-dark);
-  --color-brand-100: var(--color-brand-100-dark);
-  --color-brand-200: var(--color-brand-200-dark);
+  --color-line:
+    var(
+      --color-line-invert
+    );
 
-  --color-brand-600: var(--color-brand-600-dark);
-  --color-brand-700: var(--color-brand-700-dark);
 
-  --color-accent-500: var(--color-accent-500-dark);
+  --color-surface:
+    var(
+      --color-surface-dark
+    );
 
-  /*
-    Trong dark mode màu accent sáng hơn,
-    nên dùng chữ tối để tăng độ tương phản.
-  */
-  --color-on-accent: #0e1b24;
+  --color-surface-soft:
+    var(
+      --color-surface-dark-alt
+    );
+
+
+  --color-brand-50:
+    var(
+      --color-brand-50-dark
+    );
+
+  --color-brand-100:
+    var(
+      --color-brand-100-dark
+    );
+
+  --color-brand-200:
+    var(
+      --color-brand-200-dark
+    );
+
+
+  --color-brand-600:
+    var(
+      --color-brand-600-dark
+    );
+
+  --color-brand-700:
+    var(
+      --color-brand-700-dark
+    );
+
+
+  --color-accent-500:
+    var(
+      --color-accent-500-dark
+    );
+
+
+  --color-on-accent:
+    #0e1b24;
+
 
   color-scheme: dark;
+
 }
 
 
@@ -103,66 +168,205 @@
 
 @layer components {
 
+
   /* 1 */
+
   .section {
-    @apply py-16 sm:py-24;
+
+    @apply
+      py-16
+      sm:py-24;
+
   }
 
 
   /* 2 */
+
   .section-heading {
-    @apply mx-auto flex max-w-3xl flex-col gap-4 text-center;
+
+    @apply
+      mx-auto
+      flex
+      max-w-3xl
+      flex-col
+      gap-4
+      text-center;
+
   }
 
 
   /* 3 */
+
   .eyebrow {
-    @apply text-sm font-semibold uppercase tracking-wide text-accent-500;
+
+    @apply
+      text-sm
+      font-semibold
+      uppercase
+      tracking-wide
+      text-accent-500;
+
   }
 
 
   /* 4 */
+
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium transition-colors;
-    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500;
+
+    @apply
+      inline-flex
+      items-center
+      justify-center
+      rounded-lg
+      px-5
+      py-3
+      font-medium
+      transition-colors;
+
   }
 
 
   /* 5 */
+
   .btn-primary {
-    @apply bg-accent-500 text-on-accent hover:bg-brand-700;
+
+    @apply
+      bg-accent-500
+      text-on-accent
+      hover:bg-brand-700;
+
   }
 
 
   /* 6 */
+
   .btn-ghost {
-    @apply border border-line bg-surface text-ink hover:bg-surface-soft;
+
+    @apply
+      border
+      border-line
+      bg-surface
+      text-ink
+      hover:bg-surface-soft;
+
   }
 
 
   /* 7 */
+
   .card {
-    @apply rounded-card border border-line bg-surface p-6;
+
+    @apply
+      rounded-card
+      border
+      border-line
+      bg-surface
+      p-6;
+
   }
 
 
   /* 8 */
+
   .badge {
-    @apply rounded-full bg-accent-500 px-3 py-1 text-xs font-semibold text-on-accent;
+
+    @apply
+      rounded-full
+      bg-accent-500
+      px-3
+      py-1
+      text-xs
+      font-semibold
+      text-on-accent;
+
   }
 
 
   /* 9 */
+
   .field-label {
-    @apply text-sm font-medium text-ink;
+
+    @apply
+      text-sm
+      font-medium
+      text-ink;
+
   }
 
 
   /* 10 */
+
   .field-input {
-    @apply w-full rounded-lg border border-line bg-surface px-4 py-3 text-ink;
-    @apply focus:outline-2 focus:outline-offset-2 focus:outline-accent-500;
+
+    @apply
+      w-full
+      rounded-lg
+      border
+      border-line
+      bg-surface
+      px-4
+      py-3
+      text-ink;
+
   }
+
+}
+
+
+
+/* ==================================================
+   GLOBAL KEYBOARD FOCUS
+=================================================== */
+
+:where(
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [tabindex]
+):focus-visible {
+
+  outline:
+    2px solid
+    var(
+      --color-accent-500
+    );
+
+  outline-offset:
+    2px;
+
+}
+
+
+
+/* ==================================================
+   FORM VALIDATION
+=================================================== */
+
+.field-input[
+  aria-invalid="true"
+] {
+
+  border-color:
+    #ef4444;
+
+  outline-color:
+    #ef4444;
+
+}
+
+
+input[type="checkbox"][
+  aria-invalid="true"
+] {
+
+  outline:
+    2px solid
+    #ef4444;
+
+  outline-offset:
+    2px;
 
 }
 
@@ -173,41 +377,81 @@
 =================================================== */
 
 .slider-dot {
-  width: 0.75rem;
-  height: 0.75rem;
 
-  border: 0;
-  border-radius: 9999px;
+  width:
+    0.75rem;
 
-  background-color: var(--color-line);
+  height:
+    0.75rem;
 
-  cursor: pointer;
+
+  border:
+    0;
+
+
+  border-radius:
+    9999px;
+
+
+  background-color:
+    var(
+      --color-line
+    );
+
+
+  cursor:
+    pointer;
+
 
   transition:
-    background-color 180ms ease,
-    transform 180ms ease;
+    background-color
+    180ms
+    ease,
+    transform
+    180ms
+    ease;
+
 }
 
 
 .slider-dot:hover {
+
   background-color:
-    var(--color-accent-500);
+    var(
+      --color-accent-500
+    );
+
 }
 
 
 .slider-dot.is-active {
-  background-color:
-    var(--color-accent-500);
 
-  transform: scale(1.2);
+  background-color:
+    var(
+      --color-accent-500
+    );
+
+
+  transform:
+    scale(
+      1.2
+    );
+
 }
 
 
 .slider-dot:focus-visible {
-  outline: 2px solid
-    var(--color-accent-500);
 
-  outline-offset: 3px;
+  outline:
+    2px solid
+    var(
+      --color-accent-500
+    );
+
+
+  outline-offset:
+    3px;
+
 }
 
 
@@ -217,22 +461,39 @@
 =================================================== */
 
 [data-reveal] {
-  opacity: 0;
+
+  opacity:
+    0;
+
 
   transform:
-    translateY(24px);
+    translateY(
+      24px
+    );
+
 
   transition:
-    opacity 600ms ease,
-    transform 600ms ease;
+    opacity
+    600ms
+    ease,
+    transform
+    600ms
+    ease;
+
 }
 
 
 [data-reveal].is-visible {
-  opacity: 1;
+
+  opacity:
+    1;
+
 
   transform:
-    translateY(0);
+    translateY(
+      0
+    );
+
 }
 
 
@@ -242,25 +503,48 @@
 =================================================== */
 
 @media (
-  prefers-reduced-motion: reduce
+  prefers-reduced-motion:
+  reduce
 ) {
 
+
   html {
-    scroll-behavior: auto;
+
+    scroll-behavior:
+      auto;
+
   }
 
 
   [data-reveal] {
-    opacity: 1;
 
-    transform: none;
+    opacity:
+      1;
 
-    transition: none;
+
+    transform:
+      none;
+
+
+    transition:
+      none;
+
   }
 
 
   [data-slider-track] {
-    transition: none !important;
+
+    transition:
+      none;
+
+  }
+
+
+  .slider-dot {
+
+    transition:
+      none;
+
   }
 
 }
@@ -272,19 +556,34 @@
 =================================================== */
 
 html {
-  scroll-behavior: smooth;
+
+  scroll-behavior:
+    smooth;
+
 }
 
 
 body {
-  margin: 0;
+
+  margin:
+    0;
+
 
   font-family:
-    var(--font-body);
+    var(
+      --font-body
+    );
+
 
   background-color:
-    var(--color-surface);
+    var(
+      --color-surface
+    );
+
 
   color:
-    var(--color-ink);
+    var(
+      --color-ink
+    );
+
 }
